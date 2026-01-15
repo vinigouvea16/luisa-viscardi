@@ -75,6 +75,27 @@ const souvenir = localFont({
 export const metadata: Metadata = {
   title: 'Luísa Viscardi',
   description: 'Spreading the noise',
+  openGraph: {
+    title: 'Luísa Viscardi',
+    description: 'Spreading the noise',
+    url: 'https://https://luisa-viscardi.vercel.app/',
+    images: [
+      {
+        url: 'https://luisa-viscardi.vercel.app/luisametadataimg.png',
+        width: 1200,
+        height: 632,
+        alt: 'Luísa Viscardi',
+      },
+    ],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Luísa Viscardi',
+    images: {
+      url: 'https://luisa-viscardi.vercel.app/luisametadataimg.png',
+    },
+  },
 }
 
 export default function RootLayout({
