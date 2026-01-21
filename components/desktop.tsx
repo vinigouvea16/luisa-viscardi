@@ -155,7 +155,7 @@ export default function DesktopPage() {
           </div>
 
           {/* Linha 3: Texto 1 */}
-          <div className="flex gap-5 font-bento-sans font-semibold text-luisa-purple/90 tracking-wider leading-5">
+          <div className="flex gap-5 font-bento-sans font-semibold text-luisa-purple/90 tracking-wide leading-5">
             <div className="flex-1">
               <p>
                 Luísa Viscardi atua em frentes criativas que unem estratégia,
@@ -179,7 +179,7 @@ export default function DesktopPage() {
           </div>
 
           {/* Linha 4: Texto 2 */}
-          <div className="flex gap-5 font-bento-sans font-semibold text-luisa-purple/90 tracking-wider leading-5">
+          <div className="flex gap-5 font-bento-sans font-semibold text-luisa-purple/90 tracking-wide leading-5">
             <div className="flex-1">
               <p>
                 Ao lado da artista Stefanie, Luísa acompanha de perto cada passo
