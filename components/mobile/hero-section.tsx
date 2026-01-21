@@ -55,7 +55,7 @@ export default function HeroSectionMobile() {
           <HeaderSvg4 className="size-10" />
         </div>
         <LuisaViscardiLogo className="w-full mt-10" />
-        <p className="mt-10 mb-6 font-souvenir text-luisa-pink font-bold text-3xl mx-auto -tracking-wide uppercase ">
+        <p className="mt-10 mb-6 font-family-souvenir text-luisa-pink font-bold text-3xl mx-auto -tracking-wide uppercase ">
           spreading <br />{' '}
           <span className="font-medium italic lowercase">the</span> noise
         </p>

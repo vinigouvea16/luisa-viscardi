@@ -87,11 +87,13 @@ export default function AboutSection() {
             <p className="font-bold text-xs text-luisa-pink">PT</p>
           </div>
           <div className="col-span-3 text-luisa-purple/90">
-            <p className="font-souvenir font-medium 2xl:text-3xl text-2xl">
+            <p className="font-family-souvenir font-medium 2xl:text-3xl text-2xl leading-8">
               Do Hip-Hop à Música Brasileira, passando por Funk, House, Pop e
               Soul, Luísa mistura ritmos e eras com liberdade e inovação,
               criando experiências sonoras que atravessam décadas e envolvem
               gerações.
+              <br />
+              <span className="text-xs">+</span>
             </p>
           </div>
         </div>
@@ -102,7 +104,7 @@ export default function AboutSection() {
             <p className="font-bold text-xs text-luisa-pink">EN</p>
           </div>
           <div className="col-span-3 text-luisa-purple/90">
-            <p className="font-bento-sans font-medium tracking-wide">
+            <p className="font-bento-sans font-medium tracking-wide italic leading-5">
               From Hip-Hop to Brazilian Music, spanning Funk, House, Pop, and
               Soul, Luísa blends rhythms and eras with freedom and innovation,
               creating sonic experiences that cross decades and captivate

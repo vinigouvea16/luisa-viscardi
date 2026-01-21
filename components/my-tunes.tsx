@@ -48,18 +48,18 @@ export default function MyTunesSection() {
           {/* ESQUERDA - 4 colunas de conteúdo */}
           <div className="col-span-4 grid grid-cols-4 gap-5">
             {/* Texto PT */}
-            <div className="font-family-bento-sans col-span-4 flex flex-col gap-10">
+            <div className="col-span-4 flex flex-col gap-10">
               <p className="uppercase text-sm font-bold text-luisa-pink">PT</p>
-              <p className="italic font-bold text-luisa-purple text-lg tracking-wide">
+              <p className="font-semibold text-luisa-purple text-lg tracking-wide">
                 Do Hip-Hop à Música Brasileira, sons que cruzam décadas e
                 estilos, transformando cada set em uma jornada musical.
               </p>
             </div>
 
             {/* Texto EN */}
-            <div className="font-family-bento-sans col-span-3 flex flex-col gap-10">
+            <div className="col-span-3 flex flex-col gap-10">
               <p className="uppercase text-sm font-bold text-luisa-pink">EN</p>
-              <p className="italic font-bold text-luisa-purple text-lg tracking-wide">
+              <p className="italic font-semibold  text-luisa-purple text-lg tracking-wide">
                 From Hip-Hop to Brazilian Music, sounds that cross decades and
                 genres, turning every set into a musical journey.
               </p>
@@ -132,7 +132,9 @@ export default function MyTunesSection() {
         <div className="grid grid-cols-4 gap-3">
           {/* Texto PT */}
           <div className="col-span-1">
-            <p className="uppercase text-sm font-bold text-luisa-pink">PT</p>
+            <p className="uppercase text-sm font-bold text-luisa-pink italic">
+              PT
+            </p>
           </div>
           <div className="col-span-3 mb-4">
             <p className="text-justify font-bold text-luisa-purple text-lg tracking-wide leading-normal">

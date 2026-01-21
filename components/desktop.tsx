@@ -58,7 +58,7 @@ export default function DesktopPage() {
             <h2 className="mb-2 font-family-souvenir text-4xl">Sobre</h2>
             <p className="text-sm mb-1">PT</p>
           </div>
-          <div className="flex flex-col space-y-20 text-luisa-purple/90 tracking-wide">
+          <div className="flex flex-col space-y-20 text-luisa-purple/90 font-semibold tracking-wide leading-5">
             <p className="">
               A relação de Luísa Viscardi com a música e a arte vai muito além
               dos palcos. DJ, produtora musical e empresária, ela une música e
@@ -75,7 +75,7 @@ export default function DesktopPage() {
               das idealizadoras da JOINT, festa que desde 2022 se consolidou
               como referência na valorização do Hip-Hop e da boa música.
             </p>
-            <p className="text-base">
+            <p className="">
               Ao longo de sua carreira, Luísa se apresentou em grandes festivais
               e eventos, incluindo The Town, MITA Festival, Rock The Mountain,
               Baile da Vogue, Ensaios da Anitta, Réveillon dos Milagres e Nômade
@@ -94,7 +94,7 @@ export default function DesktopPage() {
             <h2 className="mb-2 text-4xl text-right">About</h2>
             <p className="text-sm mb-1 text-right">EN</p>
           </div>
-          <div className="flex flex-col space-y-20 italic text-luisa-purple/90 font-bold tracking-wide">
+          <div className="flex flex-col space-y-20 italic text-luisa-purple/90 font-semibold tracking-wide leading-5">
             <p className="">
               Luísa Viscardi’s connection with music and art goes far beyond the
               stage. As a DJ, music producer, and entrepreneur, she combines
@@ -129,65 +129,92 @@ export default function DesktopPage() {
 
       {/* frentes criativas */}
       <div className="grid grid-cols-12 gap-5 2xl:px-32.5 px-10">
-        {/* Div (PT)*/}
-        <div className="col-start-3 space-y-10 col-span-4 font-bold font-bento-sans">
-          <div className="flex flex-col gap-2">
-            <h2 className="mb-8 font-family-souvenir text-5xl">
-              Frentes Criativas
-            </h2>
-            <p className="text-sm mb-1">PT</p>
+        <div className="col-start-3 col-span-8 flex flex-col gap-10">
+          {/* Linha 1: Títulos */}
+          <div className="flex gap-5">
+            <div className="flex-1">
+              <h2 className="font-family-souvenir text-5xl font-bold">
+                Frentes Criativas
+              </h2>
+            </div>
+            <div className="flex-1 text-right">
+              <h2 className="font-family-bento-sans text-5xl">
+                Creative Fronts
+              </h2>
+            </div>
           </div>
-          <div className="flex flex-col space-y-10 text-luisa-purple/90 tracking-wide">
-            <p>
-              Luísa Viscardi atua em frentes criativas que unem estratégia, arte
-              e música. Pela JAMBOX, desenvolve projetos que fortalecem a
-              cultura urbana, realizam bookings de DJs renomados e promovem
-              experiências musicais inovadoras, além de idealizar a JOINT, festa
-              consolidada desde 2022 como espaço de valorização do Hip-Hop e da
-              boa música.
-            </p>
-            <p>
-              Ao lado da artista Stefanie, Luísa acompanha de perto cada passo
-              da carreira, dos lançamentos aos shows, estruturando oportunidades
-              e estratégias que potencializam sua trajetória artística e
-              consolidam sua presença no cenário musical.
-            </p>
+
+          {/* Linha 2: PT | EN */}
+          <div className="flex gap-5">
+            <div className="flex-1">
+              <p className="text-sm font-bento-sans">PT</p>
+            </div>
+            <div className="flex-1 text-right">
+              <p className="text-sm font-bento-sans font-bold">EN</p>
+            </div>
           </div>
-          <div className="flex items-center gap-10 pt-10 text-luisa-purple/90">
-            <StefanieSvg />
-            <p>Artist Manager</p>
+
+          {/* Linha 3: Texto 1 */}
+          <div className="flex gap-5 font-bento-sans font-semibold text-luisa-purple/90 tracking-wider leading-5">
+            <div className="flex-1">
+              <p>
+                Luísa Viscardi atua em frentes criativas que unem estratégia,
+                arte e música. Pela JAMBOX, desenvolve projetos que fortalecem a
+                cultura urbana, realizam bookings de DJs renomados e promovem
+                experiências musicais inovadoras, além de idealizar a JOINT,
+                festa consolidada desde 2022 como espaço de valorização do
+                Hip-Hop e da boa música.
+              </p>
+            </div>
+            <div className="flex-1 italic">
+              <p>
+                Luísa Viscardi works across creative fronts that combine
+                strategy, art, and music. Through JAMBOX, she develops projects
+                that strengthen urban culture, manage bookings for renowned DJs,
+                and deliver innovative musical experiences, in addition to
+                creating JOINT, a party established in 2022 as a space dedicated
+                to celebrating Hip-Hop and quality music.
+              </p>
+            </div>
+          </div>
+
+          {/* Linha 4: Texto 2 */}
+          <div className="flex gap-5 font-bento-sans font-semibold text-luisa-purple/90 tracking-wider leading-5">
+            <div className="flex-1">
+              <p>
+                Ao lado da artista Stefanie, Luísa acompanha de perto cada passo
+                da carreira, dos lançamentos aos shows, estruturando
+                oportunidades e estratégias que potencializam sua trajetória
+                artística e consolidam sua presença no cenário musical.
+              </p>
+            </div>
+            <div className="flex-1 italic">
+              <p>
+                Alongside the artist Stefanie, Luísa closely oversees every step
+                of her career, from releases to live shows, structuring
+                opportunities and strategies that amplify her artistic
+                trajectory and solidify her presence in the music scene.
+              </p>
+            </div>
+          </div>
+
+          {/* Linha 5: SVGs */}
+          <div className="flex gap-5 pt-10">
+            <div className="flex-1 flex items-center gap-10 font-bento-sans text-luisa-purple/90">
+              <StefanieSvg />
+              <p className="font-semibold text-lg tracking-wide">
+                Artist Manager
+              </p>
+            </div>
+            <div className="flex-1 flex items-center justify-end gap-10 font-bento-sans text-luisa-purple font-medium tracking-wide">
+              <p>Founder</p>
+              <JamboxRecordsSvg />
+            </div>
           </div>
         </div>
 
-        {/* Div (EN)*/}
-        <div className="col-span-4 space-y-10 font-bento-sans">
-          <div className="flex flex-col gap-2">
-            <h2 className="mb-8 text-5xl text-right">Creative Fronts</h2>
-            <p className="text-sm mb-1 text-right">EN</p>
-          </div>
-          <div className="flex flex-col space-y-10 italic text-luisa-purple font-bold tracking-wide">
-            <p>
-              Luísa Viscardi works across creative fronts that combine strategy,
-              art, and music. Through JAMBOX, she develops projects that
-              strengthen urban culture, manage bookings for renowned DJs, and
-              deliver innovative musical experiences, in addition to creating
-              JOINT, a party established in 2022 as a space dedicated to
-              celebrating Hip-Hop and quality music.
-            </p>
-            <p>
-              Alongside the artist Stefanie, Luísa closely oversees every step
-              of her career, from releases to live shows, structuring
-              opportunities and strategies that amplify her artistic trajectory
-              and solidify her presence in the music scene.
-            </p>
-          </div>
-          <div className="flex items-center justify-end gap-10 text-luisa-purple pt-10 font-medium tracking-wide">
-            <p>Founder</p>
-            <JamboxRecordsSvg />
-          </div>
-        </div>
-
-        <div className="col-start-3 col-span-6 mt-40 ">
+        {/* BoomBox e Discoball (não mexemos) */}
+        <div className="col-start-3 col-span-6 mt-40">
           <div className="bg-linear-to-b from-transparent via-85% h-50 via-luisa-gradient-main-pink to-transparent">
             <div className="grid grid-cols-6 gap-5">
               <div className="col-start-4 col-span-1">
@@ -196,8 +223,7 @@ export default function DesktopPage() {
             </div>
           </div>
         </div>
-
-        <div className="col-span-2 flex justify-end mt-40 ">
+        <div className="col-span-2 flex justify-end mt-40">
           <DiscoballSvg />
         </div>
       </div>
@@ -217,11 +243,11 @@ export default function DesktopPage() {
         <div className="col-start-3 col-span-8 flex justify-between">
           <div className="flex flex-col gap-10">
             <p className="font-family-souvenir font-bold text-6xl">Clientes</p>
-            <p className="uppercase text-sm font-black">pt</p>
+            <p className="uppercase text-sm ">pt</p>
           </div>
           <div className="flex flex-col text-right font-bento-sans gap-10">
             <p className="text-6xl">Clients</p>
-            <p className="uppercase text-sm font-black">en</p>
+            <p className="uppercase text-sm font-bold">en</p>
           </div>
         </div>
 
@@ -239,11 +265,11 @@ export default function DesktopPage() {
         <div className="col-start-3 col-span-8 flex justify-between">
           <div className="flex flex-col gap-10">
             <p className="font-family-souvenir font-bold text-6xl">Contato &</p>
-            <p className="uppercase text-sm font-black">pt</p>
+            <p className="uppercase text-sm">pt</p>
           </div>
           <div className="flex flex-col text-right font-family-bento-sans  gap-10">
             <p className="text-6xl">Social</p>
-            <p className="uppercase text-sm font-black">en</p>
+            <p className="uppercase text-sm font-bold">en</p>
           </div>
         </div>
         <div className="col-start-3 col-span-8 flex justify-between h-75 bg-linear-to-b from-transparent from-50% via-90% via-luisa-gradient-main-teal to-transparent" />
@@ -313,7 +339,7 @@ export default function DesktopPage() {
         <div className="col-span-4 col-start-7 grid grid-cols-4 gap-5">
           {/* Texto (1 coluna) */}
           <div className="col-span-1 col-start-2 flex items-center">
-            <p className="font-family-souvenir text-luisa-pink uppercase">
+            <p className="font-family-souvenir text-luisa-pink uppercase leading-4">
               spreading the noise
             </p>
           </div>

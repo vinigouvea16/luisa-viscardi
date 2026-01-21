@@ -117,7 +117,7 @@ export default function AgendaSection() {
                 </p>
               </div>
               <div className="col-span-4">
-                <p className="font-bento-sans mt-2 font-semibold xl:font-bold text-sm uppercase">
+                <p className="font-bento-sans mt-2 font-semibold xl:font-bold tracking-wider text-sm uppercase">
                   {event.venue}
                 </p>
               </div>

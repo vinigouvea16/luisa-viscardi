@@ -43,7 +43,7 @@ export default function HeroSection() {
   return (
     <div className="flex flex-col mt-30">
       <div className="grid grid-cols-12 gap-5 2xl:px-32.5 px-10">
-        <p className="col-start-7 my-10 col-span-2 font-souvenir font-bold text-3xl -tracking-wide uppercase">
+        <p className="col-start-7 my-10 col-span-2 font-family-souvenir font-bold text-3xl -tracking-wide uppercase">
           spreading <br />{' '}
           <span className="font-medium italic lowercase">the</span> noise
         </p>
