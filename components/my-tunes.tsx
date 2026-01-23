@@ -72,11 +72,11 @@ export default function MyTunesSection() {
           </div>
 
           {/* DIREITA - Container relativo para posicionar gradiente e botão */}
-          <div className="col-span-4 relative md:mt-40 lg:mt-0">
+          <div className="col-span-4 relative md:mt-20 lg:mt-0">
             {myTunesMedia ? (
               <>
                 {/* Gradiente */}
-                <div className="absolute xl:-bottom-25 md:bottom-25 -left-[calc(100%/4+1.25rem)] w-full h-46.25 bg-linear-to-b from-transparent via-80% via-luisa-gradient-main-teal to-transparent pointer-events-none" />
+                <div className="absolute 2xl:-bottom-25 md:bottom-30 xl:bottom-0 -left-[calc(100%/4+1.25rem)] w-full h-46.25 bg-linear-to-b from-transparent via-80% via-luisa-gradient-main-teal to-transparent pointer-events-none" />
 
                 {/* Imagem de fundo */}
                 <Image
