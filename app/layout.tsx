@@ -74,10 +74,10 @@ const souvenir = localFont({
 
 export const metadata: Metadata = {
   title: 'Luísa Viscardi',
-  description: 'Spreading the noise',
+  description: 'Crafting live experiences',
   openGraph: {
     title: 'Luísa Viscardi',
-    description: 'Spreading the noise',
+    description: 'Crafting live experiences',
     url: 'https://https://luisa-viscardi.vercel.app/',
     images: [
       {
