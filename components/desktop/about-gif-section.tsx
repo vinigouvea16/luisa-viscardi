@@ -34,7 +34,7 @@ export default function AboutSection() {
   return (
     <div className="grid grid-cols-12 gap-5 2xl:px-32.5 px-10">
       {/* Coluna da imagem/vídeo */}
-      <div className="col-start-3 col-span-4 font-bold font-bento-sans">
+      <div className="col-start-3 col-span-4  font-bento-sans">
         <div className="flex flex-col">
           {aboutGif ? (
             <>
@@ -55,7 +55,7 @@ export default function AboutSection() {
                   className="h-119 w-123.5 object-cover"
                 />
               )}
-              <div className="flex justify-between tracking-wide uppercase text-xs text-luisa-gray/70">
+              <div className="flex justify-between tracking-wide uppercase text-[8px] mt-1 lg:text-xs text-luisa-gray/70">
                 <p>{aboutGif.title}</p>
                 <p>centro esportivo tietê</p>
               </div>
@@ -87,7 +87,7 @@ export default function AboutSection() {
             <p className="font-bold text-xs text-luisa-pink">PT</p>
           </div>
           <div className="col-span-3 text-luisa-purple/90">
-            <p className="font-family-souvenir font-medium 2xl:text-3xl text-2xl leading-8">
+            <p className="font-family-souvenir font-medium 2xl:text-3xl text-xl 2xl:leading-8 leading-6">
               Do Hip-Hop à Música Brasileira, passando por Funk, House, Pop e
               Soul, Luísa mistura ritmos e eras com liberdade e inovação,
               criando experiências sonoras que atravessam décadas e envolvem

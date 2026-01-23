@@ -83,12 +83,12 @@ const MobileAboutSection = () => {
         </div>
 
         {/* Conteúdo */}
-        <div className="space-y-6 text-justify font-family-bento-sans font-semibold">
+        <div className="space-y-6 text-justify font-family-bento-sans font-bold">
           {activeTab === 'pt'
             ? content.pt.paragraphs.map((paragraph, index) => (
                 <p
                   key={index}
-                  className="text-luisa-purple/80 text-base font-family-bento-sans"
+                  className="text-luisa-purple/80 text-base font-family-bento-sans leading-snug"
                 >
                   {paragraph}
                 </p>
@@ -96,7 +96,7 @@ const MobileAboutSection = () => {
             : content.en.paragraphs.map((paragraph, index) => (
                 <p
                   key={index}
-                  className="text-luisa-purple/80 text-base font-family-bento-sans italic"
+                  className="text-luisa-purple/80 text-base font-family-bento-sans italic leading-snug"
                 >
                   {paragraph}
                 </p>

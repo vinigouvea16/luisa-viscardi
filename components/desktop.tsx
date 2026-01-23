@@ -45,20 +45,20 @@ export default function DesktopPage() {
   ]
 
   return (
-    <main className="lg:flex flex-col gap-40 my-auto text-luisa-pink max-w-445">
+    <main className="lg:flex flex-col xl:space-y-40 space-y-20 my-auto text-luisa-pink max-w-445">
       <Header />
 
       <HeroSection />
 
       {/* ABOUT */}
-      <div className="grid grid-cols-12 gap-5 2xl:px-32.5 px-10 lg:mt-30 xl:mt-0">
+      <div className="grid grid-cols-12 gap-5 2xl:px-32.5 px-10 mt-50 lg:mt-20 xl:mt-0">
         {/* Div (PT)*/}
         <div className="col-start-3 space-y-10 col-span-4 font-bold  font-bento-sans">
           <div className="flex flex-col gap-2 ">
             <h2 className="mb-2 font-family-souvenir text-4xl">Sobre</h2>
             <p className="text-sm mb-1">PT</p>
           </div>
-          <div className="flex flex-col space-y-20 text-luisa-purple/90 font-semibold tracking-wide leading-5">
+          <div className="flex flex-col space-y-20 font-family-bento-sans text-luisa-purple/90 tracking-wide leading-5">
             <p className="">
               A relação de Luísa Viscardi com a música e a arte vai muito além
               dos palcos. DJ, produtora musical e empresária, ela une música e
@@ -94,7 +94,7 @@ export default function DesktopPage() {
             <h2 className="mb-2 text-4xl text-right">About</h2>
             <p className="text-sm mb-1 text-right">EN</p>
           </div>
-          <div className="flex flex-col space-y-20 italic text-luisa-purple/90 font-semibold tracking-wide leading-5">
+          <div className="flex flex-col space-y-20 italic text-luisa-purple/90 font-family-bento-sans font-bold tracking-wide leading-5">
             <p className="">
               Luísa Viscardi’s connection with music and art goes far beyond the
               stage. As a DJ, music producer, and entrepreneur, she combines
@@ -133,12 +133,12 @@ export default function DesktopPage() {
           {/* Linha 1: Títulos */}
           <div className="flex gap-5">
             <div className="flex-1">
-              <h2 className="font-family-souvenir text-5xl font-bold">
+              <h2 className="font-family-souvenir lg:text-5xl text-4xl font-bold">
                 Frentes Criativas
               </h2>
             </div>
             <div className="flex-1 text-right">
-              <h2 className="font-family-bento-sans text-5xl">
+              <h2 className="font-family-bento-sans lg:text-5xl text-4xl">
                 Creative Fronts
               </h2>
             </div>
@@ -200,13 +200,13 @@ export default function DesktopPage() {
 
           {/* Linha 5: SVGs */}
           <div className="flex gap-5 pt-10">
-            <div className="flex-1 flex items-center gap-10 font-bento-sans text-luisa-purple/90">
+            <div className="flex-1 flex md:flex-col lg:flex-row items-center gap-10 font-bento-sans text-luisa-purple/90">
               <StefanieSvg />
               <p className="font-semibold text-lg tracking-wide">
                 Artist Manager
               </p>
             </div>
-            <div className="flex-1 flex items-center justify-end gap-10 font-bento-sans text-luisa-purple font-medium tracking-wide">
+            <div className="flex-1 flex md:flex-col lg:flex-row items-center justify-end gap-10 font-bento-sans text-luisa-purple font-medium tracking-wide">
               <p>Founder</p>
               <JamboxRecordsSvg />
             </div>
@@ -242,11 +242,13 @@ export default function DesktopPage() {
         {/* Header com títulos */}
         <div className="col-start-3 col-span-8 flex justify-between">
           <div className="flex flex-col gap-10">
-            <p className="font-family-souvenir font-bold text-6xl">Clientes</p>
+            <p className="font-family-souvenir font-bold lg:text-6xl text-5xl">
+              Clientes
+            </p>
             <p className="uppercase text-sm ">pt</p>
           </div>
           <div className="flex flex-col text-right font-bento-sans gap-10">
-            <p className="text-6xl">Clients</p>
+            <p className="lg:text-6xl text-5xl">Clients</p>
             <p className="uppercase text-sm font-bold">en</p>
           </div>
         </div>
@@ -264,11 +266,13 @@ export default function DesktopPage() {
       <div className="grid grid-cols-12 2xl:px-32.5 px-10">
         <div className="col-start-3 col-span-8 flex justify-between">
           <div className="flex flex-col gap-10">
-            <p className="font-family-souvenir font-bold text-6xl">Contato &</p>
+            <p className="font-family-souvenir font-bold lg:text-6xl text-5xl">
+              Contato &
+            </p>
             <p className="uppercase text-sm">pt</p>
           </div>
           <div className="flex flex-col text-right font-family-bento-sans  gap-10">
-            <p className="text-6xl">Social</p>
+            <p className="lg:text-6xl text-5xl">Social</p>
             <p className="uppercase text-sm font-bold">en</p>
           </div>
         </div>
@@ -336,16 +340,16 @@ export default function DesktopPage() {
           </a>
         </div>
 
-        <div className="col-span-4 col-start-7 grid grid-cols-4 gap-5">
+        <div className="col-span-4 col-start-7 grid md:grid-cols-3 grid-cols-4 gap-5">
           {/* Texto (1 coluna) */}
-          <div className="col-span-1 col-start-2 flex items-center">
-            <p className="font-family-souvenir text-luisa-pink uppercase leading-4">
+          <div className="col-span-1 md:col-start-1 lg:col-start-2 flex items-center">
+            <p className="font-family-souvenir text-luisa-pink uppercase leading-4 text-xs xl:text-base">
               spreading the noise
             </p>
           </div>
 
           {/* SVGs (1 coluna) */}
-          <div className="col-span-2 flex items-center justify-between">
+          <div className="col-span-3 md:col-start-2 lg:col-start-3 flex items-center justify-between">
             <FooterSvg1 className="max-w-8 h-auto" />
             <FooterSvg2 className="max-w-8 h-auto" />
             <FooterSvg3 className="max-w-8 h-auto" />

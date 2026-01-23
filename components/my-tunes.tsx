@@ -35,10 +35,10 @@ export default function MyTunesSection() {
   return (
     <>
       {/* Desktop */}
-      <div className="hidden lg:grid grid-cols-12 gap-5 2xl:px-32.5 px-10">
+      <div className="hidden md:grid grid-cols-12 gap-5 2xl:px-32.5 px-10">
         {/* Header */}
         <div className="col-start-3 col-span-4">
-          <h2 className="font-family-souvenir font-bold text-6xl text-nowrap text-luisa-pink">
+          <h2 className="font-family-souvenir font-bold xl:text-6xl md:text-5xl text-nowrap text-luisa-pink">
             My Tunes
           </h2>
         </div>
@@ -50,7 +50,7 @@ export default function MyTunesSection() {
             {/* Texto PT */}
             <div className="col-span-4 flex flex-col gap-10">
               <p className="uppercase text-sm font-bold text-luisa-pink">PT</p>
-              <p className="font-semibold text-luisa-purple text-lg tracking-wide">
+              <p className="font-semibold text-luisa-purple text-lg tracking-wide ">
                 Do Hip-Hop à Música Brasileira, sons que cruzam décadas e
                 estilos, transformando cada set em uma jornada musical.
               </p>
@@ -72,11 +72,11 @@ export default function MyTunesSection() {
           </div>
 
           {/* DIREITA - Container relativo para posicionar gradiente e botão */}
-          <div className="col-span-4 relative">
+          <div className="col-span-4 relative md:mt-40 lg:mt-0">
             {myTunesMedia ? (
               <>
                 {/* Gradiente */}
-                <div className="absolute 2xl:-bottom-25 lg:bottom-25 -left-[calc(100%/4+1.25rem)] w-full h-46.25 bg-linear-to-b from-transparent via-80% via-luisa-gradient-main-teal to-transparent pointer-events-none" />
+                <div className="absolute xl:-bottom-25 md:bottom-25 -left-[calc(100%/4+1.25rem)] w-full h-46.25 bg-linear-to-b from-transparent via-80% via-luisa-gradient-main-teal to-transparent pointer-events-none" />
 
                 {/* Imagem de fundo */}
                 <Image
@@ -122,7 +122,7 @@ export default function MyTunesSection() {
       </div>
 
       {/* Mobile */}
-      <div className="flex lg:hidden flex-col px-14.25 mt-10 mb-20">
+      <div className="flex md:hidden flex-col px-14.25 mt-10 mb-20">
         {/* Header */}
         <h2 className="font-family-souvenir font-bold text-3xl mb-10 text-luisa-pink">
           My Tunes
@@ -137,7 +137,7 @@ export default function MyTunesSection() {
             </p>
           </div>
           <div className="col-span-3 mb-4">
-            <p className="text-justify font-bold text-luisa-purple text-lg tracking-wide leading-normal">
+            <p className="text-justify font-bold text-luisa-purple text-lg tracking-wide leading-snug">
               Do Hip-Hop à Música Brasileira, sons que cruzam décadas e estilos,
               transformando cada set em uma jornada musical.
             </p>
@@ -148,7 +148,7 @@ export default function MyTunesSection() {
             <p className="uppercase text-sm font-bold text-luisa-pink">EN</p>
           </div>
           <div className="col-span-3 mb-12">
-            <p className="italic text-justify font-bold text-luisa-purple text-lg leading-normal">
+            <p className="italic text-justify font-bold text-luisa-purple text-lg leading-snug">
               From Hip-Hop to Brazilian Music, sounds that cross decades and
               genres, turning every set into a musical journey.
             </p>

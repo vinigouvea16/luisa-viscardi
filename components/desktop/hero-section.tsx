@@ -43,14 +43,14 @@ export default function HeroSection() {
   return (
     <div className="flex flex-col mt-30">
       <div className="grid grid-cols-12 gap-5 2xl:px-32.5 px-10">
-        <p className="col-start-7 my-10 col-span-2 font-family-souvenir font-bold text-3xl -tracking-wide uppercase">
+        <p className="col-start-7 my-10 col-span-3 font-family-souvenir font-bold text-2xl lg:text-3xl -tracking-wide uppercase">
           spreading <br />{' '}
           <span className="font-medium italic lowercase">the</span> noise
         </p>
       </div>
 
       {/* Textos */}
-      <div className="grid grid-cols-12 gap-5 2xl:px-32.5 px-10 tracking-[0.25em] uppercase text-luisa-purple font-bento-sans font-bold text-xs pb-1">
+      <div className="grid grid-cols-12 gap-5 2xl:px-32.5 px-10 tracking-[0.25em] uppercase text-luisa-purple font-bento-sans font-bold text-[8px] lg:text-xs  pb-1">
         <p className="col-span-6 text-luisa-gray">
           Luísa viscardi © 2025. all rights reserved
         </p>
@@ -68,7 +68,7 @@ export default function HeroSection() {
             loading="eager"
             height={532}
             unoptimized
-            className="object-cover object-center w-full h-auto pr-32.5 h-133 brightness-90"
+            className="object-cover object-center w-full h-auto 2xl:pr-32.5 pr-10  brightness-90"
           />
         ) : (
           <div className="w-full pr-32.5 h-133 bg-luisa-gray/20 flex items-center justify-center">
@@ -94,7 +94,7 @@ export default function HeroSection() {
                     loop
                     muted
                     playsInline
-                    className="h-119 w-123.5 object-cover"
+                    className="max-h-119 w-123.5 object-cover"
                   />
                 ) : (
                   // eslint-disable-next-line @next/next/no-img-element
@@ -104,7 +104,7 @@ export default function HeroSection() {
                     className="h-119 w-123.5 object-cover"
                   />
                 )}
-                <div className="flex justify-between mt-4 font-bold tracking-widest text-luisa-gray/80 font-bento-sans uppercase text-xs">
+                <div className="flex justify-between mt-4 tracking-widest text-luisa-gray/80 font-bento-sans uppercase text-[8px] lg:text-xs ">
                   <p>{heroOverlayGif.title}</p>
                   <p>parque villa-lobos</p>
                 </div>

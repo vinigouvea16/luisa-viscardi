@@ -68,12 +68,12 @@ export default function AgendaSection() {
     return (
       <div className="grid grid-cols-12 gap-5 2xl:px-32.5 px-10">
         <div className="col-start-3 col-span-3">
-          <p className="font-family-souvenir font-bold text-6xl text-luisa-pink">
+          <p className="font-family-souvenir font-bold lg:text-6xl text-5xl text-luisa-pink">
             Agenda
           </p>
         </div>
-        <div className="col-span-3 col-start-8 flex flex-col gap-11">
-          <p className="flex items-center justify-end font-bento-sans font-medium text-6xl text-luisa-pink">
+        <div className="col-span-3 col-start-8 flex flex-col xl:gap-8 gap-4">
+          <p className="flex items-center justify-end font-bento-sans font-medium lg:text-6xl text-5xl text-luisa-pink">
             2026
           </p>
           <div className="w-full h-px bg-luisa-pink mb-11" />
@@ -90,21 +90,21 @@ export default function AgendaSection() {
   }
 
   return (
-    <div className="grid grid-cols-12 gap-5 2xl:px-32.5 px-10">
+    <div className="grid grid-cols-12 md:gap-2  2xl:px-32.5 px-10">
       <div className="col-start-3 col-span-3">
-        <p className="font-family-souvenir font-bold text-6xl text-luisa-pink">
+        <p className="font-family-souvenir font-bold lg:text-6xl text-5xl text-luisa-pink">
           Agenda
         </p>
       </div>
 
-      <div className="col-span-3 col-start-8 flex flex-col gap-11">
-        <p className="flex items-center justify-end font-bento-sans font-medium text-6xl text-luisa-pink">
+      <div className="col-span-3 col-start-8 flex flex-col xl:gap-8 gap-4">
+        <p className="flex items-center justify-end font-bento-sans font-medium lg:text-6xl text-5xl text-luisa-pink">
           2026
         </p>
         <div className="w-full h-px bg-luisa-pink mb-11" />
       </div>
 
-      <div className="col-start-3 col-span-8 grid grid-cols-8 gap-5">
+      <div className="col-start-3 col-span-8 grid grid-cols-8 md:gap-2 ">
         <div className="col-span-5 flex flex-col text-luisa-purple">
           {events.map(event => (
             <div
@@ -162,7 +162,7 @@ export default function AgendaSection() {
       </div>
 
       <div className="col-span-3 h-75">
-        <div className="flex flex-col justify-between h-full pb-2 font-bento-sans text-sm text-luisa-gray/80 uppercase">
+        <div className="flex flex-col justify-between h-full pb-2 font-bento-sans text-[8px] lg:text-xs text-luisa-gray/80 uppercase">
           <div className="flex items-center justify-between">
             <p>{agendaGif?.title || 'ensaios da anitta'}</p>
             <p>parque villa-lobos</p>

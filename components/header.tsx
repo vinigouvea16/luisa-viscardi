@@ -13,14 +13,14 @@ export default function Header() {
       <Link
         href="/"
         scroll
-        className="col-span-2 flex items-center"
+        className="col-span-3 lg:col-span-2 flex items-center"
         aria-label="link to homepage"
       >
         <LuisaViscardiLogo />
       </Link>
 
       {/* SVGs - coluna 7 (já está correto) */}
-      <div className="col-start-7 col-span-3 flex items-center gap-12">
+      <div className="col-start-7 col-span-6 flex items-center gap-12">
         <HeaderSvg1 className="size-8" />
         <HeaderSvg2 className="size-8" />
         <HeaderSvg3 className="size-8" />
@@ -28,9 +28,9 @@ export default function Header() {
       </div>
 
       {/* Hamburger - última coluna antes da margem */}
-      <div className="col-span-1 col-start-12 flex items-center justify-end">
+      {/* <div className="col-span-1 col-start-12 flex items-center justify-end">
         <HamburgerMenuSvg className="size-8" />
-      </div>
+      </div> */}
     </div>
   )
 }

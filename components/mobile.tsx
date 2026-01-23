@@ -45,9 +45,9 @@ export default function MobilePage() {
     <main className="flex flex-col lg:hidden">
       {/* header */}
       <div className="fixed grid grid-cols-4 gap-3 w-full justify-between px-14.25 pt-12 pb-10 bg-linear-to-b from-white via-white/40 to-transparent z-20">
-        <div className="col-span-1 col-start-4 flex justify-end">
+        {/* <div className="col-span-1 col-start-4 flex justify-end">
           <HamburgerMenuSvg className="size-8 text-luisa-pink" />
-        </div>
+        </div> */}
       </div>
 
       <HeroSectionMobile />
