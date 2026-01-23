@@ -38,7 +38,7 @@ export default function MyTunesSection() {
       <div className="hidden md:grid grid-cols-12 gap-5 2xl:px-32.5 px-10">
         {/* Header */}
         <div className="col-start-3 col-span-4">
-          <h2 className="font-family-souvenir font-bold xl:text-6xl md:text-5xl text-nowrap text-luisa-pink">
+          <h2 className="font-family-souvenir font-bold 2xl:text-6xl md:text-4xl lg:text-5xl text-nowrap text-luisa-pink">
             My Tunes
           </h2>
         </div>

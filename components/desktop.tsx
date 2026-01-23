@@ -133,12 +133,12 @@ export default function DesktopPage() {
           {/* Linha 1: Títulos */}
           <div className="flex gap-5">
             <div className="flex-1">
-              <h2 className="font-family-souvenir lg:text-5xl text-4xl font-bold">
+              <h2 className="font-family-souvenir xl:text-5xl md:text-2xl lg:text-3xl font-bold">
                 Frentes Criativas
               </h2>
             </div>
             <div className="flex-1 text-right">
-              <h2 className="font-family-bento-sans lg:text-5xl text-4xl">
+              <h2 className="font-family-bento-sans xl:text-5xl text-3xl">
                 Creative Fronts
               </h2>
             </div>

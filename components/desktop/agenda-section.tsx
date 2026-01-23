@@ -90,7 +90,7 @@ export default function AgendaSection() {
   }
 
   return (
-    <div className="grid grid-cols-12 md:gap-2  2xl:px-32.5 px-10">
+    <div className="grid grid-cols-12 md:gap-2 2xl:px-32.5 px-10">
       <div className="col-start-3 col-span-3">
         <p className="font-family-souvenir font-bold lg:text-6xl text-5xl text-luisa-pink">
           Agenda
@@ -109,7 +109,7 @@ export default function AgendaSection() {
           {events.map(event => (
             <div
               key={event.id}
-              className="grid grid-cols-5 xl:gap-5 gap-3 border-b border-luisa-purple/0 py-2.5"
+              className="lg:grid lg:grid-cols-5 md:flex md:flex-col xl:gap-5 lg:gap-3 border-b border-luisa-purple/0 py-2.5 md:-space-y-2"
             >
               <div className="col-span-1">
                 <p className="font-family-souvenir font-semibold -tracking-widest xl:text-3xl text-2xl">
