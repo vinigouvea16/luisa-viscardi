@@ -196,7 +196,7 @@ export default function MobilePage() {
             <a
               target="blank"
               rel="noreferrer"
-              href="https://www.youtube.com/viscardilu"
+              href="https://www.youtube.com/acordorole"
             >
               <YouTubeSvg />
             </a>

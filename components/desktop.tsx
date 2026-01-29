@@ -369,7 +369,7 @@ export default function DesktopPage() {
           <a
             target="blank"
             rel="noreferrer"
-            href="https://www.youtube.com/viscardilu"
+            href="https://www.youtube.com/acordorole"
             aria-label="Link to Luisa's YouTube page"
           >
             <YouTubeSvg />
