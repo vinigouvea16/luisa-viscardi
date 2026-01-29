@@ -51,7 +51,7 @@ const MobileAboutSection = () => {
           <h2 className="font-family-souvenir font-bold text-3xl text-luisa-pink">
             {content.pt.title}
           </h2>
-          <h2 className="font-family-souvenir font-medium text-3xl text-luisa-pink">
+          <h2 className="font-family-bento-sans font-medium text-3xl text-luisa-pink">
             {content.en.title}
           </h2>
         </div>
@@ -161,7 +161,7 @@ const MobileAboutSection = () => {
           <div className="col-span-1">
             <p className="font-bold text-xs text-luisa-pink">PT</p>
           </div>
-          <div className="col-span-3 text-luisa-purple/90">
+          <div className="col-span-3 text-luisa-purple/90 mb-6">
             <p className="font-family-souvenir font-medium text-xl text-justify leading-tight">
               Do Hip-Hop à Música Brasileira, passando por Funk, House, Pop e
               Soul, Luísa mistura ritmos e eras com liberdade e inovação,

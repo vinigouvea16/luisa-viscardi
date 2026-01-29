@@ -28,7 +28,7 @@ const MobileCreativeFrontsSection = () => {
   return (
     <div className="px-14.25 py-8 mt-12">
       <div className="flex justify-between items-center mb-8">
-        <h2 className="font-bento-sans font-bold text-xl text-luisa-pink text-nowrap">
+        <h2 className="font-family-bento-sans font-bold text-2xl text-luisa-pink text-nowrap">
           {content.pt.title}
         </h2>
         {/* Botões PT e EN */}
@@ -64,7 +64,7 @@ const MobileCreativeFrontsSection = () => {
           ? content.pt.paragraphs.map((paragraph, index) => (
               <p
                 key={index}
-                className="text-luisa-purple font-bold text-base leading-snug text-justify font-bento-sans tracking-wide"
+                className="text-luisa-purple font-bold font-family-bento-sans  text-base leading-snug text-justify font-bento-sans tracking-wide"
               >
                 {paragraph}
               </p>
@@ -72,7 +72,7 @@ const MobileCreativeFrontsSection = () => {
           : content.en.paragraphs.map((paragraph, index) => (
               <p
                 key={index}
-                className="text-luisa-purple text-base leading-snug text-justify font-bento-sans italic font-bold tracking-wide"
+                className="text-luisa-purple text-base leading-snug font-family-bento-sans text-justify font-bento-sans italic font-bold tracking-wide"
               >
                 {paragraph}
               </p>

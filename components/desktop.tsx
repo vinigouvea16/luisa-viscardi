@@ -67,7 +67,7 @@ export default function DesktopPage() {
               entre gêneros e décadas com liberdade, trazendo energia e
               personalidade a cada set.
             </p>
-            <p className="">
+            <p className="mt-1">
               Fundadora da JAMBOX, Luísa é responsável pelo desenvolvimento de
               projetos focados na cultura urbana, agenciando artistas
               brasileiros e realizando bookings de DJs internacionais no Brasil,
@@ -138,7 +138,7 @@ export default function DesktopPage() {
               </h2>
             </div>
             <div className="flex-1 text-right">
-              <h2 className="font-family-bento-sans xl:text-4xl 2xl:text-5xl text-3xl">
+              <h2 className="font-family-bento-sans font-medium xl:text-4xl 2xl:text-5xl text-3xl">
                 Creative Fronts
               </h2>
             </div>
@@ -255,10 +255,46 @@ export default function DesktopPage() {
 
         {/* Grid de logos - mesma posição de colunas */}
 
-        <div className="col-start-3 col-span-8 grid grid-cols-5 justify-between h-124 mt-32.5 items-center justify-items-center">
-          {logosOrdenados.map((Logo, index) => (
-            <Logo key={index} className="max-w-16 xl:max-w-24 max-h-16" />
-          ))}
+        <div className="col-start-3 col-span-8 mt-32.5">
+          {/* Linha 1 - 6 logos */}
+          <div className="flex items-center justify-between gap-8 mb-12">
+            <ClienteLogos.LollaSvg className="max-w-20" />
+            <ClienteLogos.ChanelSvg className="max-w-20" />
+            <ClienteLogos.SpotifyWideSvg className="max-w-28 " />
+            <ClienteLogos.HeinekenSvg className="max-w-24" />
+            <ClienteLogos.NetflixSvg className="max-w-24 " />
+            <ClienteLogos.GoogleSvg className="max-w-28 " />
+          </div>
+
+          {/* Linha 2 - 6 logos */}
+          <div className="flex items-center justify-between gap-8 mb-12">
+            <ClienteLogos.VogueSvg className="max-w-24" />
+            <ClienteLogos.SamsungSvg className="max-w-30  mt-4" />
+            <ClienteLogos.DoveSvg className="max-w-24" />
+            <ClienteLogos.MercedesBenzSvg className="max-w-24" />
+            <ClienteLogos.GucciSvg className="max-w-16 " />
+            <ClienteLogos.CocaColaSvg className="max-w-28" />
+          </div>
+
+          {/* Linha 3 - 6 logos */}
+          <div className="flex items-center justify-between gap-8 mb-12">
+            <ClienteLogos.AmazonSvg className="max-w-24" />
+            <ClienteLogos.ForbesSvg className="max-w-24" />
+            <ClienteLogos.SephoraSvg className="max-w-32 " />
+            <ClienteLogos.FendiSvg className="max-w-22" />
+            <ClienteLogos.BudweiserSvg className="max-w-36" />
+            <ClienteLogos.YoutubeSvg className="max-w-14" />
+          </div>
+
+          {/* Linha 4 - 6 logos */}
+          <div className="flex items-center justify-between gap-16">
+            <ClienteLogos.SohoSvg className="max-w-24" />
+            <ClienteLogos.JazzMansionSvg className="max-w-20" />
+            <ClienteLogos.ReveillonDosMilagresSvg className="max-w-16" />
+            <ClienteLogos.ReveillonCarneirosSvg className="max-w-16" />
+            <ClienteLogos.EnsaiosSvg className="max-w-22" />
+            <ClienteLogos.HeavyHouseSvg className="max-w-34" />
+          </div>
         </div>
       </div>
 

@@ -50,7 +50,7 @@ export default function HeroSection() {
       </div>
 
       {/* Textos */}
-      <div className="grid grid-cols-12 gap-5 2xl:px-32.5 px-10 tracking-[0.25em] uppercase text-luisa-purple font-bento-sans font-bold text-[8px] lg:text-xs  pb-1">
+      <div className="grid grid-cols-12 gap-5 2xl:px-32.5 px-10 tracking-[0.25em] uppercase text-luisa-purple font-bento-sans font-bold text-[8px] lg:text-xs pb-0.5">
         <p className="col-span-6 text-luisa-gray">
           Luísa viscardi © 2025. all rights reserved
         </p>

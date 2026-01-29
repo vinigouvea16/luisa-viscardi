@@ -19,22 +19,32 @@ const geistMono = Geist_Mono({
 const bentoSans = localFont({
   src: [
     {
-      path: './fonts/Bento sans/BentonSans-Medium.ttf',
+      path: './fonts/Metrik/Metrik-Regular.otf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: './fonts/Metrik/Metrik-Medium.otf',
       weight: '500',
       style: 'normal',
     },
     {
-      path: './fonts/Bento sans/BentonSans-Bold.ttf',
+      path: './fonts/Metrik/Metrik-Bold.otf',
       weight: '700',
       style: 'normal',
     },
     {
-      path: './fonts/Bento sans/BentonSans-Italic.ttf',
+      path: './fonts/Metrik/Metrik-Italic.otf',
       weight: '400',
       style: 'italic',
     },
     {
-      path: './fonts/Bento sans/BentonSans-BoldItalic.ttf',
+      path: './fonts/Metrik/Metrik-Medium-Italic.otf',
+      weight: '500',
+      style: 'italic',
+    },
+    {
+      path: './fonts/Metrik/Metrik-Bold-Italic.otf',
       weight: '700',
       style: 'italic',
     },

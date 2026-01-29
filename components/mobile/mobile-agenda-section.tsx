@@ -64,28 +64,6 @@ export default function AgendaSectionMobile() {
     )
   }
 
-  if (events.length === 0) {
-    return (
-      <div className="flex flex-col mt-8">
-        <div className="flex flex-col px-14.25 space-y-3 text-luisa-pink my-11">
-          <h1 className="font-family-souvenir font-bold text-3xl">Agenda</h1>
-          <div className="h-px bg-luisa-pink w-full" />
-          <p className="flex justify-end font-family-bento-sans font-medium text-3xl">
-            {new Date().getFullYear()}
-          </p>
-        </div>
-
-        <div className="px-14.25 flex items-center justify-center py-20">
-          <p className="text-luisa-purple text-center text-sm">
-            Nenhum evento agendado no momento.
-            <br />
-            <span className="text-xs text-luisa-gray">Volte em breve!</span>
-          </p>
-        </div>
-      </div>
-    )
-  }
-
   return (
     <div className="flex flex-col mt-8">
       {/* header */}
@@ -99,20 +77,32 @@ export default function AgendaSectionMobile() {
 
       {/* lista */}
       <div className="px-14.25 mb-8">
-        {events.map(event => (
-          <div
-            key={event.id}
-            className="flex flex-col text-luisa-purple font-medium mb-5"
-          >
-            <span className="font-family-souvenir tracking-tighter text-2xl font-semibold">
-              {event.date}
-            </span>
-            <p className="uppercase text-sm mb-2 tracking-tight">
-              {event.venue}
+        {events.length === 0 ? (
+          // Mensagem quando não tem eventos
+          <div className="py-10">
+            <p className="font-family-bento-sans text-sm text-luisa-purple/70 italic">
+              Novas datas em breve.
+              <br />
+              Fique ligado nas redes sociais para os próximos anúncios!
             </p>
-            <div className="h-px bg-luisa-purple/15" />
           </div>
-        ))}
+        ) : (
+          // Lista de eventos
+          events.map(event => (
+            <div
+              key={event.id}
+              className="flex flex-col text-luisa-purple font-medium mb-5"
+            >
+              <span className="font-family-souvenir tracking-tighter text-2xl font-semibold">
+                {event.date}
+              </span>
+              <p className="font-family-bento-sans uppercase text-sm mb-2 tracking-tight">
+                {event.venue}
+              </p>
+              <div className="h-px bg-luisa-purple/15" />
+            </div>
+          ))
+        )}
       </div>
 
       {/* footer */}

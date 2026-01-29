@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import HamburgerMenuSvg from './svgs/pink-svgs/hamburger-menu'
 import LuisaViscardiLogo from './svgs/pink-svgs/luisa-viscardi'
 import HeaderSvg1 from './svgs/purple-svgs/header/header-svg1'
 import HeaderSvg2 from './svgs/purple-svgs/header/header-svg2'
@@ -9,7 +8,7 @@ import HeaderSvg4 from './svgs/purple-svgs/header/header-svg4'
 export default function Header() {
   return (
     <div className="grid grid-cols-12 gap-5 2xl:px-32.5 px-14 pt-16 pb-4 bg-linear-to-b from-white via-white/40 to-transparent fixed top-0 left-0 right-0 z-20 max-w-445">
-      {/* Logo - começa na coluna 3 (igual ao resto) */}
+      {/* Logo - coluna 1-3 */}
       <Link
         href="/"
         scroll
@@ -19,18 +18,22 @@ export default function Header() {
         <LuisaViscardiLogo />
       </Link>
 
-      {/* SVGs - coluna 7 (já está correto) */}
-      <div className="col-start-7 col-span-6 flex items-center gap-12">
+      {/* SVGs - coluna 7-10 */}
+      <div className="col-start-7 col-span-4 flex items-center gap-12">
         <HeaderSvg1 className="size-8" />
         <HeaderSvg2 className="size-8" />
         <HeaderSvg3 className="size-8" />
         <HeaderSvg4 className="size-8" />
       </div>
 
-      {/* Hamburger - última coluna antes da margem */}
-      {/* <div className="col-span-1 col-start-12 flex items-center justify-end">
-        <HamburgerMenuSvg className="size-8" />
-      </div> */}
+      {/* Botão - coluna 11-12 (sem div wrapper, sem ml-6) */}
+      <button
+        type="button"
+        className="col-span-2 col-start-11 uppercase font-bento-sans tracking-[0.15em] font-medium xl:text-xs lg:text-[10px] md:text-[8px] text-nowrap border rounded-full border-luisa-pink w-fit px-3 py-1 text-luisa-purple hover:bg-luisa-pink/80 hover:text-white flex items-center justify-center max-h-6 my-auto hover:shadow-lg"
+        disabled
+      >
+        download press kit
+      </button>
     </div>
   )
 }
