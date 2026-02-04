@@ -80,6 +80,11 @@ const MobileCreativeFrontsSection = () => {
       </div>
 
       {/* Footer fixo - sempre visível */}
+      <div className="flex justify-evenly mb-8 items-center gap-4">
+        <JamboxRecordsSvg />
+        <p className="font-bento-sans font-bold text-luisa-purple">Founder</p>
+      </div>
+
       <div className="grid grid-cols-4 gap-4 items-center text-luisa-purple">
         <div className="col-span-2 flex justify-center">
           <StefanieSvg />
@@ -90,9 +95,6 @@ const MobileCreativeFrontsSection = () => {
       </div>
 
       {/* Jambox centralizado abaixo do BoomBox */}
-      <div className="flex justify-center mt-8">
-        <JamboxRecordsSvg />
-      </div>
 
       <div className="flex flex-col mt-20 ">
         <div className="bg-linear-to-b relative from-transparent via-85% h-50 via-luisa-gradient-main-pink to-transparent">
