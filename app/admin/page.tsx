@@ -9,7 +9,14 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card'
-import { Calendar, Images, Loader2, LogOut, Music } from 'lucide-react'
+import {
+  Calendar,
+  Images,
+  Loader2,
+  LogOut,
+  Music,
+  Settings,
+} from 'lucide-react'
 import { useRouter } from 'next/navigation'
 import { useEffect } from 'react'
 
@@ -71,7 +78,7 @@ export default function AdminDashboard() {
         </div>
 
         {/* Cards Grid */}
-        <div className="grid gap-8 md:grid-cols-2 max-w-4xl mx-auto">
+        <div className="grid gap-8 md:grid-cols-3 max-w-6xl mx-auto">
           {/* Galeria Card */}
           <Card
             className="border-2 border-border/50 bg-card/50 backdrop-blur hover:border-primary hover:shadow-lg hover:shadow-primary/20 transition-all cursor-pointer group overflow-hidden relative"
@@ -140,11 +147,42 @@ export default function AdminDashboard() {
               </div>
             </CardContent>
           </Card>
+
+          {/* Settings Card */}
+          <Card
+            className="border-2 border-border/50 bg-card/50 backdrop-blur hover:border-luisa-pink hover:shadow-lg hover:shadow-luisa-pink/20 transition-all cursor-pointer group overflow-hidden relative"
+            onClick={() => router.push('/admin/settings')}
+          >
+            <div className="absolute inset-0 bg-linear-to-br from-luisa-pink/5 to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+
+            <CardHeader className="relative">
+              <div className="w-16 h-16 rounded-2xl bg-linear-to-br from-luisa-pink to-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg lg:mx-0 mx-auto">
+                <Settings className="w-8 h-8 text-white" />
+              </div>
+              <CardTitle className="text-2xl text-center lg:text-start">
+                Configurações
+              </CardTitle>
+              <CardDescription className="text-base text-center lg:text-start">
+                Press Kit e Redes Sociais
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="relative">
+              <p className="text-muted-foreground mb-4 text-center lg:text-start">
+                Atualize o Press Kit (PDF) e os links das suas redes sociais.
+              </p>
+              <div className="flex items-center gap-2 text-sm text-luisa-pink font-semibold justify-center lg:justify-start">
+                <span>Configurar</span>
+                <span className="group-hover:translate-x-1 transition-transform">
+                  →
+                </span>
+              </div>
+            </CardContent>
+          </Card>
         </div>
 
         {/* Quick Stats (opcional) */}
-        <div className="mt-12 max-w-4xl mx-auto">
-          <div className="grid grid-cols-2 gap-4 text-center">
+        <div className="mt-12 max-w-6xl mx-auto">
+          <div className="grid grid-cols-3 gap-8 text-center">
             <div className="bg-card/30 backdrop-blur rounded-lg p-4 border border-border/50">
               <p className="text-3xl font-bold text-primary mb-1">📸</p>
               <p className="text-sm text-muted-foreground">Mídia Visual</p>
@@ -157,6 +195,15 @@ export default function AdminDashboard() {
                 📅
               </p>
               <p className="text-sm text-muted-foreground">Próximos Shows</p>
+            </div>
+            <div className="bg-card/30 backdrop-blur rounded-lg p-4 border border-border/50">
+              <p
+                className="text-3xl font-bold mb-1"
+                // style={{ color: '#5ECCC3' }}
+              >
+                🔗
+              </p>
+              <p className="text-sm text-muted-foreground">Edite seus links</p>
             </div>
           </div>
         </div>

@@ -1,49 +1,17 @@
 import * as ClienteLogos from '@/components/svgs/purple-svgs/clients'
 import AboutSection from './desktop/about-gif-section'
 import AgendaSection from './desktop/agenda-section'
+import FooterDesktop from './desktop/footer'
 import HeroSection from './desktop/hero-section'
 import Header from './header'
 import MyTunesSection from './my-tunes'
-import FooterSvg1 from './svgs/pink-svgs/footer/footer-svg1'
-import FooterSvg2 from './svgs/pink-svgs/footer/footer-svg2'
-import FooterSvg3 from './svgs/pink-svgs/footer/footer-svg3'
 import FromPastToFutureSvg from './svgs/pink-svgs/huge-svg'
 import BoomBoxSvg from './svgs/purple-svgs/body/boombox'
 import DiscoballSvg from './svgs/purple-svgs/body/discoball'
 import JamboxRecordsSvg from './svgs/purple-svgs/body/jambox'
 import StefanieSvg from './svgs/purple-svgs/body/stefanie'
-import FacebookSvg from './svgs/socials/facebook'
-import InstagramSvg from './svgs/socials/instagram'
-import SoundCloudSvg from './svgs/socials/soundcloud'
-import SpotifySvg from './svgs/socials/spotify'
-import TikTokSvg from './svgs/socials/tiktok'
-import YouTubeSvg from './svgs/socials/youtube'
 
 export default function DesktopPage() {
-  const logosOrdenados = [
-    ClienteLogos.LollaSvg,
-    ClienteLogos.ChanelSvg,
-    ClienteLogos.SpotifyWideSvg,
-    ClienteLogos.BudweiserSvg,
-    ClienteLogos.HeavyHouseSvg,
-    ClienteLogos.VogueSvg,
-    ClienteLogos.SamsungSvg,
-    ClienteLogos.MercedesBenzSvg,
-    ClienteLogos.GoogleSvg,
-    ClienteLogos.GucciSvg,
-    ClienteLogos.CocaColaSvg,
-    ClienteLogos.AmazonMusicSvg,
-    ClienteLogos.ForbesSvg,
-    ClienteLogos.HeinekenSvg,
-    ClienteLogos.SephoraSvg,
-    ClienteLogos.NetflixSvg,
-    ClienteLogos.JazzMansionSvg,
-    ClienteLogos.ReveillonDosMilagresSvg,
-    ClienteLogos.ReveillonCarneirosSvg,
-    ClienteLogos.GlamuramaSvg,
-    ClienteLogos.BigTikTokSvg,
-  ]
-
   return (
     <main className="lg:flex flex-col xl:space-y-40 space-y-20 my-auto text-luisa-pink max-w-445">
       <Header />
@@ -316,82 +284,7 @@ export default function DesktopPage() {
       </div>
 
       {/* footer */}
-      <div
-        className="grid grid-cols-12 gap-5 2xl:px-32.5 px-10 mb-28"
-        id="footer"
-      >
-        <div className="col-span-4 col-start-3 flex justify-between items-center">
-          <a
-            target="blank"
-            rel="noreferrer"
-            href="https://www.instagram.com/luisaviscardi/"
-            aria-label="Link to Luisa's instagram page"
-          >
-            <InstagramSvg />
-          </a>
-
-          <a
-            target="blank"
-            rel="noreferrer"
-            href="https://www.tiktok.com/@luisa.viscardi"
-            aria-label="Link to Luisa's TikTok page"
-          >
-            <TikTokSvg />
-          </a>
-
-          <a
-            target="blank"
-            rel="noreferrer"
-            href="https://soundcloud.com/luisaviscardi"
-            aria-label="Link to Luisa's Soundcloud page"
-          >
-            <SoundCloudSvg />
-          </a>
-
-          <a
-            target="blank"
-            rel="noreferrer"
-            href="https://open.spotify.com/artist/5crcFRnnfwZTcGybeH6OH3?si=V5TaScr5R0qOUcfqWsOd5Q"
-            aria-label="Link to Luisa's Spotify page"
-          >
-            <SpotifySvg />
-          </a>
-
-          <a
-            target="blank"
-            rel="noreferrer"
-            href="https://www.facebook.com/djluisaviscardi/"
-            aria-label="Link to Luisa's Facebook page"
-          >
-            <FacebookSvg />
-          </a>
-
-          <a
-            target="blank"
-            rel="noreferrer"
-            href="https://www.youtube.com/acordorole"
-            aria-label="Link to Luisa's YouTube page"
-          >
-            <YouTubeSvg />
-          </a>
-        </div>
-
-        <div className="col-span-4 col-start-7 grid md:grid-cols-3 grid-cols-4 gap-5">
-          {/* Texto (1 coluna) */}
-          <div className="col-span-1 md:col-start-1 lg:col-start-2 flex items-center">
-            <p className="font-family-souvenir text-luisa-pink uppercase leading-4 text-xs xl:text-base">
-              spreading the noise
-            </p>
-          </div>
-
-          {/* SVGs (1 coluna) */}
-          <div className="col-span-3 md:col-start-2 lg:col-start-3 flex items-center justify-between">
-            <FooterSvg1 className="max-w-8 h-auto" />
-            <FooterSvg2 className="max-w-8 h-auto" />
-            <FooterSvg3 className="max-w-8 h-auto" />
-          </div>
-        </div>
-      </div>
+      <FooterDesktop />
     </main>
   )
 }

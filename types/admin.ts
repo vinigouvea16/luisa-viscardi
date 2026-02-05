@@ -35,3 +35,15 @@ export type AgendaEvent = {
   venue: string
   createdAt: Date
 }
+
+// =================== SETTINGS ====================
+
+export type Settings = {
+  pressKitUrl?: string
+  instagramUrl?: string
+  spotifyUrl?: string
+  soundcloudUrl?: string
+  tiktokUrl?: string
+  youtubeUrl?: string
+  facebookUrl?: string
+}

@@ -52,7 +52,7 @@ export default function HeroSection() {
       {/* Textos */}
       <div className="grid grid-cols-12 gap-5 2xl:px-32.5 px-10 tracking-[0.25em] uppercase text-luisa-purple font-bento-sans font-bold text-[8px] lg:text-xs pb-0.5">
         <p className="col-span-6 text-luisa-gray">
-          Luísa viscardi © 2025. all rights reserved
+          Luísa viscardi © 2026. all rights reserved
         </p>
         <p className="col-start-7 col-span-3">BEM-VINDX AO MEU MUNDO</p>
         <p className="col-span-3 text-right italic">WELCOME TO MY WORLD</p>
