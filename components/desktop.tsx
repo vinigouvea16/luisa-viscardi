@@ -1,15 +1,13 @@
 import * as ClienteLogos from '@/components/svgs/purple-svgs/clients'
 import AboutSection from './desktop/about-gif-section'
+import DesktopAboutSection from './desktop/about-section'
 import AgendaSection from './desktop/agenda-section'
+import CreativeFronts from './desktop/creative-fronts'
 import FooterDesktop from './desktop/footer'
 import HeroSection from './desktop/hero-section'
 import Header from './header'
 import MyTunesSection from './my-tunes'
 import FromPastToFutureSvg from './svgs/pink-svgs/huge-svg'
-import BoomBoxSvg from './svgs/purple-svgs/body/boombox'
-import DiscoballSvg from './svgs/purple-svgs/body/discoball'
-import JamboxRecordsSvg from './svgs/purple-svgs/body/jambox'
-import StefanieSvg from './svgs/purple-svgs/body/stefanie'
 
 export default function DesktopPage() {
   return (
@@ -19,182 +17,12 @@ export default function DesktopPage() {
       <HeroSection />
 
       {/* ABOUT */}
-      <div className="grid grid-cols-12 gap-5 2xl:px-32.5 px-10 mt-50 lg:mt-20 xl:mt-0">
-        {/* Div (PT)*/}
-        <div className="col-start-3 space-y-10 col-span-4 font-bold  font-bento-sans">
-          <div className="flex flex-col gap-2 ">
-            <h2 className="mb-2 font-family-souvenir text-4xl">Sobre</h2>
-            <p className="text-sm mb-1">PT</p>
-          </div>
-          <div className="flex flex-col space-y-20 font-family-bento-sans text-luisa-purple/90 tracking-wide leading-5">
-            <p className="">
-              A relação de Luísa Viscardi com a música e a arte vai muito além
-              dos palcos. DJ, produtora musical e empresária, ela une música e
-              moda como formas complementares de expressão, criando uma
-              identidade artística única. Seu estilo freestyle permite transitar
-              entre gêneros e décadas com liberdade, trazendo energia e
-              personalidade a cada set.
-            </p>
-            <p className="mt-1">
-              Fundadora da JAMBOX, Luísa é responsável pelo desenvolvimento de
-              projetos focados na cultura urbana, agenciando artistas
-              brasileiros e realizando bookings de DJs internacionais no Brasil,
-              além de promover experiências musicais inovadoras. É também uma
-              das idealizadoras da JOINT, festa que desde 2022 se consolidou
-              como referência na valorização do Hip-Hop e da boa música.
-            </p>
-            <p className="">
-              Ao longo de sua carreira, Luísa se apresentou em grandes festivais
-              e eventos, incluindo The Town, MITA Festival, Rock The Mountain,
-              Baile da Vogue, Ensaios da Anitta, Réveillon dos Milagres e Nômade
-              Festival, além de eventos de marcas globais como Adidas x Gucci,
-              Google, Mercedes-Benz, Sephora, Netflix e Red Bull.
-              Internacionalmente, levou sua música para países como Nova
-              Zelândia, Austrália, Bahamas, Espanha, Itália, Inglaterra, Estados
-              Unidos, Portugal e Maldivas.
-            </p>
-          </div>
-        </div>
-
-        {/* Div (EN)*/}
-        <div className="col-span-4 space-y-10  font-bento-sans ">
-          <div className="flex flex-col gap-2 ">
-            <h2 className="mb-2 text-4xl text-right">About</h2>
-            <p className="text-sm mb-1 text-right">EN</p>
-          </div>
-          <div className="flex flex-col space-y-20 italic text-luisa-purple/90 font-family-bento-sans font-bold tracking-wide leading-5">
-            <p className="">
-              Luísa Viscardi’s connection with music and art goes far beyond the
-              stage. As a DJ, music producer, and entrepreneur, she combines
-              music and fashion as complementary forms of expression, creating a
-              unique artistic identity. Her freestyle approach allows her to
-              move freely across genres and decades, delivering sets full of
-              energy and personality.
-            </p>
-            <p className="">
-              Founder of JAMBOX, Luísa develops projects focused on urban
-              culture, managing Brazilian artists and handling bookings for
-              international DJs in Brazil, while creating innovative musical
-              experiences. She is also one of the creators of JOINT, a party
-              that has been a reference in celebrating Hip-Hop and quality music
-              since 2022.
-            </p>
-            <p className="mt-5">
-              Throughout her career, Luísa has performed at major festivals and
-              events, including The Town, MITA Festival, Rock The Mountain,
-              Baile da Vogue, Ensaios da Anitta, Réveillon dos Milagres, and
-              Nômade Festival, as well as events for global brands such as
-              Adidas x Gucci, Google, Mercedes-Benz, Sephora, Netflix, and Red
-              Bull. Internationally, she has brought her music to countries
-              including New Zealand, Australia, the Bahamas, Spain, Italy,
-              England, the United States, Portugal, and the Maldives.
-            </p>
-          </div>
-        </div>
-      </div>
+      <DesktopAboutSection />
       {/* gif */}
       <AboutSection />
 
       {/* frentes criativas */}
-      <div className="grid grid-cols-12 gap-5 2xl:px-32.5 px-10">
-        <div className="col-start-3 col-span-8 flex flex-col gap-10">
-          {/* Linha 1: Títulos */}
-          <div className="flex gap-5">
-            <div className="flex-1">
-              <h2 className="font-family-souvenir xl:text-4xl 2xl:text-5xl md:text-2xl lg:text-3xl font-bold">
-                Frentes Criativas
-              </h2>
-            </div>
-            <div className="flex-1 text-right">
-              <h2 className="font-family-bento-sans font-medium xl:text-4xl 2xl:text-5xl text-3xl">
-                Creative Fronts
-              </h2>
-            </div>
-          </div>
-
-          {/* Linha 2: PT | EN */}
-          <div className="flex gap-5">
-            <div className="flex-1">
-              <p className="text-sm font-bento-sans">PT</p>
-            </div>
-            <div className="flex-1 text-right">
-              <p className="text-sm font-bento-sans font-bold">EN</p>
-            </div>
-          </div>
-
-          {/* Linha 3: Texto 1 */}
-          <div className="flex gap-5 font-bento-sans font-semibold text-luisa-purple/90 tracking-wide leading-5">
-            <div className="flex-1">
-              <p>
-                Luísa Viscardi atua em frentes criativas que unem estratégia,
-                arte e música. Pela JAMBOX, desenvolve projetos que fortalecem a
-                cultura urbana, realizam bookings de DJs renomados e promovem
-                experiências musicais inovadoras, além de idealizar a JOINT,
-                festa consolidada desde 2022 como espaço de valorização do
-                Hip-Hop e da boa música.
-              </p>
-            </div>
-            <div className="flex-1 italic">
-              <p>
-                Luísa Viscardi works across creative fronts that combine
-                strategy, art, and music. Through JAMBOX, she develops projects
-                that strengthen urban culture, manage bookings for renowned DJs,
-                and deliver innovative musical experiences, in addition to
-                creating JOINT, a party established in 2022 as a space dedicated
-                to celebrating Hip-Hop and quality music.
-              </p>
-            </div>
-          </div>
-
-          {/* Linha 4: Texto 2 */}
-          <div className="flex gap-5 font-bento-sans font-semibold text-luisa-purple/90 tracking-wide leading-5">
-            <div className="flex-1">
-              <p>
-                Ao lado da artista Stefanie, Luísa acompanha de perto cada passo
-                da carreira, dos lançamentos aos shows, estruturando
-                oportunidades e estratégias que potencializam sua trajetória
-                artística e consolidam sua presença no cenário musical.
-              </p>
-            </div>
-            <div className="flex-1 italic">
-              <p>
-                Alongside the artist Stefanie, Luísa closely oversees every step
-                of her career, from releases to live shows, structuring
-                opportunities and strategies that amplify her artistic
-                trajectory and solidify her presence in the music scene.
-              </p>
-            </div>
-          </div>
-
-          {/* Linha 5: SVGs */}
-          <div className="flex gap-5 pt-10">
-            <div className="flex-1 flex md:flex-col lg:flex-row items-center gap-10 font-bento-sans text-luisa-purple/90">
-              <StefanieSvg />
-              <p className="font-semibold text-lg tracking-wide">
-                Artist Manager
-              </p>
-            </div>
-            <div className="flex-1 flex md:flex-col lg:flex-row items-center justify-end gap-10 font-bento-sans text-luisa-purple font-medium tracking-wide">
-              <p>Founder</p>
-              <JamboxRecordsSvg />
-            </div>
-          </div>
-        </div>
-
-        {/* BoomBox e Discoball (não mexemos) */}
-        <div className="col-start-3 col-span-6 mt-40">
-          <div className="bg-linear-to-b from-transparent via-85% h-50 via-luisa-gradient-main-pink to-transparent">
-            <div className="grid grid-cols-6 gap-5">
-              <div className="col-start-4 col-span-1">
-                <BoomBoxSvg />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col-span-2 flex justify-end mt-40">
-          <DiscoballSvg />
-        </div>
-      </div>
+      <CreativeFronts />
 
       <MyTunesSection />
 

@@ -1,6 +1,5 @@
 'use client'
 
-import { useAuth } from '@/components/auth-provider'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import {
@@ -12,6 +11,7 @@ import {
 } from '@/components/ui/dialog'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
+import { useAuth } from '@/context/auth-provider'
 import { addEvent, deleteEvent, getAllEvents } from '@/lib/firebase/agenda'
 import type { AgendaEvent } from '@/types/admin'
 import { ArrowLeft, Calendar, Loader2, Plus, Trash2 } from 'lucide-react'

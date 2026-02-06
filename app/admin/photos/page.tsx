@@ -1,6 +1,5 @@
 'use client'
 
-import { useAuth } from '@/components/auth-provider'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import {
@@ -20,6 +19,7 @@ import {
   SelectValue,
 } from '@/components/ui/select'
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { useAuth } from '@/context/auth-provider'
 import {
   addMedia,
   deleteMedia,
@@ -194,7 +194,7 @@ export default function MediaPage() {
               <ArrowLeft className="w-5 h-5" />
             </Button>
             <div>
-              <h1 className="text-xl font-bold text-luisa-purple">
+              <h1 className="text-xl font-bold text-luisa-purple uppercase">
                 Galeria de Mídia
               </h1>
               <p className="text-xs text-muted-foreground">

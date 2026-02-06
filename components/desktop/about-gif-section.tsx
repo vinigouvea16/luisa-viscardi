@@ -1,11 +1,13 @@
 'use client'
 
+import { useContent } from '@/context/content-context'
 import { getMediaByCategory } from '@/lib/firebase/media'
 import type { Media } from '@/types/admin'
 import { useEffect, useState } from 'react'
 import VinilBoxSvg from '../svgs/purple-svgs/body/vinil-box'
 
 export default function AboutSection() {
+  const { content, loading: contentLoading } = useContent()
   const [aboutGif, setAboutGif] = useState<Media | null>(null)
   const [loading, setLoading] = useState(true)
 
@@ -21,7 +23,7 @@ export default function AboutSection() {
     loadAboutMedia()
   }, [])
 
-  if (loading) {
+  if (loading || contentLoading || !content) {
     return (
       <div className="grid grid-cols-12 gap-5 2xl:px-32.5 px-10">
         <div className="col-start-3 col-span-8 flex items-center justify-center py-20">
@@ -30,7 +32,6 @@ export default function AboutSection() {
       </div>
     )
   }
-
   return (
     <div className="grid grid-cols-12 gap-5 2xl:px-32.5 px-10">
       {/* Coluna da imagem/vídeo */}
@@ -88,10 +89,7 @@ export default function AboutSection() {
           </div>
           <div className="col-span-3 text-luisa-purple/90">
             <p className="font-family-souvenir font-medium 2xl:text-3xl text-xl 2xl:leading-8 leading-6">
-              Do Hip-Hop à Música Brasileira, passando por Funk, House, Pop e
-              Soul, Luísa mistura ritmos e eras com liberdade e inovação,
-              criando experiências sonoras que atravessam décadas e envolvem
-              gerações.
+              {content.about.shortTextPT}
               <br />
               <span className="text-xs">+</span>
             </p>
@@ -105,10 +103,7 @@ export default function AboutSection() {
           </div>
           <div className="col-span-3 text-luisa-purple/90">
             <p className="font-bento-sans font-medium tracking-wide italic leading-5">
-              From Hip-Hop to Brazilian Music, spanning Funk, House, Pop, and
-              Soul, Luísa blends rhythms and eras with freedom and innovation,
-              creating sonic experiences that cross decades and captivate
-              generations.
+              {content.about.shortTextEN}
             </p>
           </div>
         </div>

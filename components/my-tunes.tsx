@@ -1,5 +1,6 @@
 'use client'
 
+import { useContent } from '@/context/content-context'
 import { getMediaByCategory } from '@/lib/firebase/media'
 import type { Media } from '@/types/admin'
 import Image from 'next/image'
@@ -7,6 +8,7 @@ import { useEffect, useState } from 'react'
 import MeltedVinilSvg from './svgs/purple-svgs/body/melted-vinil'
 
 export default function MyTunesSection() {
+  const { content, loading: contentLoading } = useContent()
   const [myTunesMedia, setMyTunesMedia] = useState<Media | null>(null)
   const [loading, setLoading] = useState(true)
 
@@ -22,7 +24,7 @@ export default function MyTunesSection() {
     loadMyTunesMedia()
   }, [])
 
-  if (loading) {
+  if (loading || contentLoading || !content) {
     return (
       <div className="grid grid-cols-12 gap-5 2xl:px-32.5 px-10 lg:px-14.25">
         <div className="col-span-12 lg:col-start-3 lg:col-span-8 flex items-center justify-center py-20">
@@ -51,8 +53,7 @@ export default function MyTunesSection() {
             <div className="col-span-4 flex flex-col gap-10">
               <p className="uppercase text-sm font-bold text-luisa-pink">PT</p>
               <p className="font-semibold text-luisa-purple text-lg tracking-wide ">
-                Do Hip-Hop à Música Brasileira, sons que cruzam décadas e
-                estilos, transformando cada set em uma jornada musical.
+                {content?.myTunes.textPT}
               </p>
             </div>
 
@@ -60,8 +61,7 @@ export default function MyTunesSection() {
             <div className="col-span-3 flex flex-col gap-10">
               <p className="uppercase text-sm font-bold text-luisa-pink">EN</p>
               <p className="italic font-semibold  text-luisa-purple text-lg tracking-wide">
-                From Hip-Hop to Brazilian Music, sounds that cross decades and
-                genres, turning every set into a musical journey.
+                {content?.myTunes.textEN}
               </p>
             </div>
 

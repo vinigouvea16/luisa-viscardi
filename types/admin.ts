@@ -47,3 +47,36 @@ export type Settings = {
   youtubeUrl?: string
   facebookUrl?: string
 }
+
+// =================== CONTENT (TEXTOS DO SITE) ====================
+
+export type AboutContent = {
+  paragraph1PT: string
+  paragraph1EN: string
+  paragraph2PT: string
+  paragraph2EN: string
+  paragraph3PT: string
+  paragraph3EN: string
+  shortTextPT: string
+  shortTextEN: string
+}
+
+export type FrentesCriativasContent = {
+  titlePT: string
+  titleEN: string
+  paragraph1PT: string
+  paragraph1EN: string
+  paragraph2PT: string
+  paragraph2EN: string
+}
+
+export type MyTunesContent = {
+  textPT: string
+  textEN: string
+}
+
+export type SiteContent = {
+  about: AboutContent
+  frentesCriativas: FrentesCriativasContent
+  myTunes: MyTunesContent
+}

@@ -1,10 +1,10 @@
 'use client'
 
-import { useAuth } from '@/components/auth-provider'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
+import { useAuth } from '@/context/auth-provider'
 import {
   deletePressKit,
   getSettings,
@@ -130,7 +130,9 @@ export default function SettingsPage() {
               <ArrowLeft className="w-5 h-5" />
             </Button>
             <div>
-              <h1 className="text-xl font-bold">Configurações</h1>
+              <h1 className="text-xl font-bold uppercase text-luisa-purple">
+                Configurações
+              </h1>
               <p className="text-xs text-muted-foreground">
                 Press Kit e Redes Sociais
               </p>
@@ -204,7 +206,7 @@ export default function SettingsPage() {
                   <Button
                     onClick={handleUploadPressKit}
                     disabled={!selectedFile || uploading}
-                    className="gap-2"
+                    className="gap-2 font-light"
                   >
                     {uploading ? (
                       <>
@@ -331,7 +333,7 @@ export default function SettingsPage() {
               <Button
                 onClick={handleSaveLinks}
                 disabled={saving}
-                className="w-full gap-2 bg-luisa-pink text-white"
+                className="w-full font-light gap-2 bg-luisa-pink text-white"
               >
                 {saving ? (
                   <>
