@@ -44,7 +44,7 @@ export default function Header() {
           href={pressKitUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="col-span-2 col-start-11 uppercase font-bento-sans tracking-[0.15em] font-medium xl:text-xs lg:text-[10px] md:text-[8px] text-nowrap border rounded-full border-luisa-pink w-fit px-3 py-1 text-luisa-purple hover:bg-luisa-pink hover:text-white transition-colors flex items-center justify-center max-h-6 my-auto"
+          className="col-span-2 col-start-11 uppercase font-bento-sans tracking-[0.15em] font-medium xl:text-xs lg:text-[10px] md:text-[8px] text-nowrap border rounded-full border-luisa-pink w-fit px-3 py-1 text-luisa-purple hover:bg-luisa-pink/80 hover:shadow-lg hover:text-white transition-colors flex items-center justify-center max-h-6 my-auto"
         >
           download press kit
         </a>

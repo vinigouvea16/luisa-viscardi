@@ -331,7 +331,7 @@ export default function SettingsPage() {
               <Button
                 onClick={handleSaveLinks}
                 disabled={saving}
-                className="w-full gap-2"
+                className="w-full gap-2 bg-luisa-pink text-white"
               >
                 {saving ? (
                   <>
