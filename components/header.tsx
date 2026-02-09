@@ -20,7 +20,7 @@ export default function Header() {
     })
   }, [])
   return (
-    <div className="grid grid-cols-12 gap-5 2xl:px-32.5 px-14 pt-16 pb-4 bg-linear-to-b from-white via-white/40 to-transparent fixed top-0 left-0 right-0 z-20 max-w-445">
+    <div className="grid grid-cols-12 gap-5 2xl:px-32.5 px-10 pt-16 pb-4 bg-linear-to-b from-white via-white/40 to-transparent fixed top-0 left-0 right-0 z-20 max-w-445">
       {/* Logo - coluna 1-3 */}
       <Link
         href="/"
@@ -44,14 +44,14 @@ export default function Header() {
           href={pressKitUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="col-span-2 col-start-11 uppercase font-bento-sans tracking-[0.15em] font-medium xl:text-xs lg:text-[10px] md:text-[8px] text-nowrap border rounded-full border-luisa-pink w-fit px-3 py-1 text-luisa-purple hover:bg-luisa-pink/80 hover:shadow-lg hover:text-white transition-colors flex items-center justify-center max-h-6 my-auto"
+          className="col-span-2 col-start-11 ml-auto uppercase font-bento-sans tracking-[0.15em] font-medium xl:text-xs lg:text-[10px] md:text-[8px] text-nowrap border rounded-full border-luisa-pink w-fit px-3 py-1 text-luisa-purple hover:bg-luisa-pink/80 hover:shadow-lg hover:text-white transition-colors flex items-center justify-center max-h-6 my-auto"
         >
           download press kit
         </a>
       ) : (
         <button
           type="button"
-          className="col-span-2 col-start-11 uppercase font-bento-sans tracking-[0.15em] font-medium xl:text-xs lg:text-[10px] md:text-[8px] text-nowrap border rounded-full border-luisa-pink/50 w-fit px-3 py-1 text-luisa-purple/50 cursor-not-allowed flex items-center justify-center max-h-6 my-auto"
+          className="col-span-2 col-start-11 ml-auto uppercase font-bento-sans tracking-[0.15em] font-medium xl:text-xs lg:text-[10px] md:text-[8px] text-nowrap border rounded-full border-luisa-pink/50 w-fit px-3 py-1 text-luisa-purple/50 cursor-not-allowed flex items-center justify-center max-h-6 my-auto"
           disabled
         >
           download press kit
