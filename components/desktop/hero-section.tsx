@@ -94,7 +94,7 @@ export default function HeroSection() {
                     loop
                     muted
                     playsInline
-                    className="max-h-119 w-123.5 object-cover"
+                    className="h-119 w-123.5 object-cover"
                   />
                 ) : (
                   // eslint-disable-next-line @next/next/no-img-element
