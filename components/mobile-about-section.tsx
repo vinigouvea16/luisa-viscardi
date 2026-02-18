@@ -130,7 +130,7 @@ const MobileAboutSection = () => {
                   )}
                   <div className="flex flex-col tracking-wide uppercase text-xs text-luisa-gray/70">
                     <p>{aboutGif.title}</p>
-                    <p className="text-right">centro esportivo tietê</p>
+                    {/* <p className="text-right">centro esportivo tietê</p> */}
                   </div>
                 </>
               ) : (

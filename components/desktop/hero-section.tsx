@@ -106,7 +106,7 @@ export default function HeroSection() {
                 )}
                 <div className="flex justify-between mt-4 tracking-widest text-luisa-gray/80 font-bento-sans uppercase text-[8px] lg:text-xs ">
                   <p>{heroOverlayGif.title}</p>
-                  <p>parque villa-lobos</p>
+                  {/* <p>parque villa-lobos</p> */}
                 </div>
               </>
             ) : (

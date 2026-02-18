@@ -114,7 +114,7 @@ export default function HeroSectionMobile() {
                   )}
                   <div className="flex flex-col mt-1 gap-1 text-luisa-gray/50 uppercase text-xs">
                     <p className="text-left">{heroOverlayGif.title}</p>
-                    <p className="text-right">parque villa-lobos</p>
+                    {/* <p className="text-right">parque villa-lobos</p> */}
                   </div>
                 </>
               ) : (

@@ -150,7 +150,7 @@ export default function AgendaSection() {
         <div className="flex flex-col justify-between h-full pb-2 font-family-bento-sans text-[8px] lg:text-xs text-luisa-gray/80 uppercase">
           <div className="flex items-center justify-between">
             <p>{agendaGif?.title || 'ensaios da anitta'}</p>
-            <p>parque villa-lobos</p>
+            {/* <p>parque villa-lobos</p> */}
           </div>
           <div className="flex items-baseline justify-between">
             <p>gifs by thales côrtes</p>

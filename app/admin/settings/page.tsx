@@ -15,6 +15,7 @@ import type { Settings } from '@/types/admin'
 import {
   ArrowLeft,
   Download,
+  Link,
   Loader2,
   Save,
   Trash2,
@@ -23,6 +24,8 @@ import {
 import { useRouter } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
 
+type PressKitMode = 'link' | 'pdf'
+
 export default function SettingsPage() {
   const { user, loading: authLoading } = useAuth()
   const router = useRouter()
@@ -30,7 +33,10 @@ export default function SettingsPage() {
   const [loading, setLoading] = useState(true)
   const [saving, setSaving] = useState(false)
   const [uploading, setUploading] = useState(false)
+  const [savingLink, setSavingLink] = useState(false)
   const [selectedFile, setSelectedFile] = useState<File | null>(null)
+  const [pressKitMode, setPressKitMode] = useState<PressKitMode>('link')
+  const [driveLink, setDriveLink] = useState('')
   const initializedRef = useRef(false)
 
   // Redirecionar se não autenticado
@@ -95,17 +101,43 @@ export default function SettingsPage() {
     setUploading(false)
   }
 
+  const handleSaveDriveLink = async () => {
+    if (!driveLink.trim()) return
+    setSavingLink(true)
+    const { error } = await updateSettings({ pressKitUrl: driveLink.trim() })
+    if (error) {
+      alert(`Erro ao salvar link: ${error}`)
+    } else {
+      setSettings(prev => ({ ...prev, pressKitUrl: driveLink.trim() }))
+      setDriveLink('')
+      alert('Link salvo com sucesso!')
+    }
+    setSavingLink(false)
+  }
+
   const handleDeletePressKit = async () => {
     if (!confirm('Tem certeza que deseja deletar o Press Kit?')) return
 
-    const { error } = await deletePressKit()
+    const isFirebaseUrl = settings.pressKitUrl?.includes(
+      'firebasestorage.googleapis.com'
+    )
 
-    if (error) {
-      alert(`Erro ao deletar: ${error}`)
+    if (isFirebaseUrl) {
+      const { error } = await deletePressKit()
+      if (error) {
+        alert(`Erro ao deletar: ${error}`)
+        return
+      }
     } else {
-      setSettings(prev => ({ ...prev, pressKitUrl: '' }))
-      alert('Press Kit deletado com sucesso!')
+      const { error } = await updateSettings({ pressKitUrl: '' })
+      if (error) {
+        alert(`Erro ao deletar: ${error}`)
+        return
+      }
     }
+
+    setSettings(prev => ({ ...prev, pressKitUrl: '' }))
+    alert('Press Kit removido com sucesso!')
   }
 
   if (authLoading || loading) {
@@ -147,84 +179,148 @@ export default function SettingsPage() {
           {/* Press Kit */}
           <Card className="border-border/50 bg-card/50 backdrop-blur">
             <CardHeader>
-              <CardTitle>Press Kit (PDF)</CardTitle>
+              <CardTitle>Press Kit</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
+              {/* Current press kit */}
               {settings.pressKitUrl ? (
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between p-4 bg-muted/50 rounded-lg">
-                    <div className="flex items-center gap-3">
-                      <Download className="w-5 h-5 text-primary" />
-                      <div>
-                        <p className="font-medium">press-kit.pdf</p>
-                        <p className="text-xs text-muted-foreground">
-                          Press Kit atual
-                        </p>
-                      </div>
+                <div className="flex items-center justify-between p-4 bg-muted/50 rounded-lg">
+                  <div className="flex items-center gap-3">
+                    <Download className="w-5 h-5 text-primary" />
+                    <div>
+                      <p className="font-medium text-sm truncate max-w-xs">
+                        {settings.pressKitUrl.includes(
+                          'firebasestorage.googleapis.com'
+                        )
+                          ? 'press-kit.pdf'
+                          : settings.pressKitUrl}
+                      </p>
+                      <p className="text-xs text-muted-foreground">
+                        Press Kit atual
+                      </p>
                     </div>
-                    <div className="flex gap-2">
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        onClick={() =>
-                          window.open(settings.pressKitUrl, '_blank')
-                        }
-                      >
-                        <Download className="w-4 h-4 mr-2" />
-                        Download
-                      </Button>
-                      <Button
-                        variant="destructive"
-                        size="sm"
-                        onClick={handleDeletePressKit}
-                      >
-                        <Trash2 className="w-4 h-4" />
-                      </Button>
-                    </div>
+                  </div>
+                  <div className="flex gap-2">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() =>
+                        window.open(settings.pressKitUrl, '_blank')
+                      }
+                    >
+                      <Download className="w-4 h-4 mr-2" />
+                      Abrir
+                    </Button>
+                    <Button
+                      variant="destructive"
+                      size="sm"
+                      onClick={handleDeletePressKit}
+                    >
+                      <Trash2 className="w-4 h-4" />
+                    </Button>
                   </div>
                 </div>
               ) : (
                 <p className="text-sm text-muted-foreground">
-                  Nenhum Press Kit enviado ainda
+                  Nenhum Press Kit configurado ainda
                 </p>
               )}
 
-              <div className="space-y-2">
-                <Label htmlFor="press-kit">
-                  {settings.pressKitUrl
-                    ? 'Atualizar Press Kit'
-                    : 'Fazer Upload'}
-                </Label>
-                <div className="flex gap-2">
-                  <Input
-                    id="press-kit"
-                    type="file"
-                    accept="application/pdf"
-                    onChange={handleFileSelect}
-                    disabled={uploading}
-                  />
-                  <Button
-                    onClick={handleUploadPressKit}
-                    disabled={!selectedFile || uploading}
-                    className="gap-2 font-light"
-                  >
-                    {uploading ? (
-                      <>
-                        <Loader2 className="w-4 h-4 animate-spin" />
-                        Enviando...
-                      </>
-                    ) : (
-                      <>
-                        <Upload className="w-4 h-4" />
-                        Upload
-                      </>
-                    )}
-                  </Button>
-                </div>
-                <p className="text-xs text-muted-foreground">
-                  Formato aceito: PDF (max 10MB)
-                </p>
+              {/* Mode toggle */}
+              <div className="flex rounded-lg border border-border overflow-hidden w-fit">
+                <button
+                  type="button"
+                  onClick={() => setPressKitMode('link')}
+                  className={`flex items-center gap-2 px-4 py-2 text-sm transition-colors ${
+                    pressKitMode === 'link'
+                      ? 'bg-luisa-pink text-white'
+                      : 'text-muted-foreground hover:bg-muted'
+                  }`}
+                >
+                  <Link className="w-3.5 h-3.5" />
+                  Link (Drive, etc.)
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setPressKitMode('pdf')}
+                  className={`flex items-center gap-2 px-4 py-2 text-sm transition-colors ${
+                    pressKitMode === 'pdf'
+                      ? 'bg-luisa-pink text-white'
+                      : 'text-muted-foreground hover:bg-muted'
+                  }`}
+                >
+                  <Upload className="w-3.5 h-3.5" />
+                  Upload PDF
+                </button>
               </div>
+
+              {pressKitMode === 'link' ? (
+                <div className="space-y-2">
+                  <Label htmlFor="drive-link">URL do arquivo (Google Drive, Dropbox, etc.)</Label>
+                  <div className="flex gap-2">
+                    <Input
+                      id="drive-link"
+                      type="url"
+                      placeholder="https://drive.google.com/..."
+                      value={driveLink}
+                      onChange={e => setDriveLink(e.target.value)}
+                      disabled={savingLink}
+                    />
+                    <Button
+                      onClick={handleSaveDriveLink}
+                      disabled={!driveLink.trim() || savingLink}
+                      className="gap-2 font-light"
+                    >
+                      {savingLink ? (
+                        <>
+                          <Loader2 className="w-4 h-4 animate-spin" />
+                          Salvando...
+                        </>
+                      ) : (
+                        <>
+                          <Save className="w-4 h-4" />
+                          Salvar
+                        </>
+                      )}
+                    </Button>
+                  </div>
+                </div>
+              ) : (
+                <div className="space-y-2">
+                  <Label htmlFor="press-kit">
+                    {settings.pressKitUrl ? 'Substituir PDF' : 'Fazer Upload'}
+                  </Label>
+                  <div className="flex gap-2">
+                    <Input
+                      id="press-kit"
+                      type="file"
+                      accept="application/pdf"
+                      onChange={handleFileSelect}
+                      disabled={uploading}
+                    />
+                    <Button
+                      onClick={handleUploadPressKit}
+                      disabled={!selectedFile || uploading}
+                      className="gap-2 font-light"
+                    >
+                      {uploading ? (
+                        <>
+                          <Loader2 className="w-4 h-4 animate-spin" />
+                          Enviando...
+                        </>
+                      ) : (
+                        <>
+                          <Upload className="w-4 h-4" />
+                          Upload
+                        </>
+                      )}
+                    </Button>
+                  </div>
+                  <p className="text-xs text-muted-foreground">
+                    Formato aceito: PDF (max 10MB)
+                  </p>
+                </div>
+              )}
             </CardContent>
           </Card>
 

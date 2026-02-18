@@ -56,14 +56,14 @@ export default function CreativeFronts() {
         {/* Linha 5: SVGs */}
         <div className="flex gap-5 pt-10">
           <div className="flex-1 flex md:flex-col lg:flex-row items-center gap-10 font-bento-sans text-luisa-purple/90">
-            <StefanieSvg />
+            <JamboxRecordsSvg />
+            <p className="font-semibold text-lg tracking-wide">Founder</p>
+          </div>
+          <div className="flex-1 flex md:flex-col lg:flex-row items-center justify-end gap-10 font-bento-sans text-luisa-purple font-medium tracking-wide">
             <p className="font-semibold text-lg tracking-wide">
               Artist Manager
             </p>
-          </div>
-          <div className="flex-1 flex md:flex-col lg:flex-row items-center justify-end gap-10 font-bento-sans text-luisa-purple font-medium tracking-wide">
-            <p>Founder</p>
-            <JamboxRecordsSvg />
+            <StefanieSvg />
           </div>
         </div>
       </div>
