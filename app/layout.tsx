@@ -86,26 +86,28 @@ const souvenir = localFont({
 export const metadata: Metadata = {
   title: 'Luísa Viscardi',
   description: 'Crafting live experiences',
+  metadataBase: new URL('https://luisaviscardi.com'),
   openGraph: {
     title: 'Luísa Viscardi',
     description: 'Crafting live experiences',
-    url: 'https://https://luisa-viscardi.vercel.app/',
+    url: 'https://luisa-viscardi.vercel.app',
+    siteName: 'Luísa Viscardi',
     images: [
       {
-        url: 'https://luisa-viscardi.vercel.app/luisametadataimg.png',
+        url: '/luisametadataimg.png',
         width: 1200,
-        height: 632,
-        alt: 'Luísa Viscardi',
+        height: 630,
+        alt: 'Luísa Viscardi - DJ, Producer & Entrepreneur',
       },
     ],
+    locale: 'pt_BR',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Luísa Viscardi',
-    images: {
-      url: 'https://luisa-viscardi.vercel.app/luisametadataimg.png',
-    },
+    description: 'Crafting live experiences',
+    images: ['/luisametadataimg.png'],
   },
 }
 
