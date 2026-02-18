@@ -40,6 +40,7 @@ export default function MediaPage() {
   const [loading, setLoading] = useState(true)
   const [isUploadDialogOpen, setIsUploadDialogOpen] = useState(false)
   const [newMediaTitle, setNewMediaTitle] = useState('')
+  const [newMediaPlace, setNewMediaPlace] = useState('')
   const [newMediaLink, setNewMediaLink] = useState('')
   const [newMediaCategory, setNewMediaCategory] =
     useState<MediaCategory>('hero-main')
@@ -103,7 +104,8 @@ export default function MediaPage() {
         fileUrl,
         newMediaCategory,
         newMediaType,
-        newMediaLink || undefined
+        newMediaLink || undefined,
+        newMediaPlace || undefined
       )
 
       if (error) {
@@ -117,6 +119,7 @@ export default function MediaPage() {
           type: newMediaType,
           uploadedAt: new Date(),
           link: newMediaLink || undefined,
+          place: newMediaPlace || undefined,
         }
 
         setMedia(prev => [newMedia, ...prev])
@@ -126,6 +129,7 @@ export default function MediaPage() {
           URL.revokeObjectURL(previewUrl)
         }
         setNewMediaTitle('')
+        setNewMediaPlace('')
         setNewMediaLink('')
         setNewMediaCategory('hero-main')
         setNewMediaType('photo')
@@ -455,6 +459,28 @@ export default function MediaPage() {
               />
             </div>
 
+            {/* Place (opcional) */}
+            <div className="space-y-2">
+              <Label htmlFor="media-place">
+                Local / Legenda (opcional)
+                <span className="text-xs text-muted-foreground ml-2">
+                  Ex: Parque Villa-Lobos, Centro Esportivo Tietê
+                </span>
+              </Label>
+              <Input
+                id="media-place"
+                type="text"
+                placeholder="Ex: Parque Villa-Lobos"
+                value={newMediaPlace}
+                onChange={e => setNewMediaPlace(e.target.value)}
+                className="bg-background/50"
+                disabled={uploading}
+              />
+              <p className="text-xs text-muted-foreground">
+                Aparece como legenda abaixo do GIF/foto no site
+              </p>
+            </div>
+
             {/* Link (opcional) */}
             <div className="space-y-2">
               <Label htmlFor="media-link">
@@ -489,6 +515,7 @@ export default function MediaPage() {
                   setPreviewUrl(null)
                   setSelectedFile(null)
                   setNewMediaTitle('')
+                  setNewMediaPlace('')
                   setNewMediaLink('')
                 }}
                 disabled={uploading}

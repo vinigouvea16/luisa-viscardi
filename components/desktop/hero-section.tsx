@@ -59,7 +59,7 @@ export default function HeroSection() {
       </div>
 
       {/* Container com imagem de fundo e divs sobrepostas */}
-      <div className="relative">
+      <div className="relative min-h-[40rem]">
         {heroMainImage ? (
           <Image
             alt={heroMainImage.title || 'foto da dj'}
@@ -106,7 +106,7 @@ export default function HeroSection() {
                 )}
                 <div className="flex justify-between mt-4 tracking-widest text-luisa-gray/80 font-bento-sans uppercase text-[8px] lg:text-xs ">
                   <p>{heroOverlayGif.title}</p>
-                  {/* <p>parque villa-lobos</p> */}
+                  {heroOverlayGif.place && <p>{heroOverlayGif.place}</p>}
                 </div>
               </>
             ) : (

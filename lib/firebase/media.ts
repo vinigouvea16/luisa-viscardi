@@ -39,7 +39,8 @@ export const addMedia = async (
   url: string,
   category: MediaCategory,
   type: MediaType,
-  link?: string
+  link?: string,
+  place?: string
 ): Promise<{ id: string; error: null } | { id: null; error: string }> => {
   try {
     const docRef = await addDoc(collection(db, COLLECTION_NAME), {
@@ -48,6 +49,7 @@ export const addMedia = async (
       category,
       type,
       link: link || null,
+      place: place || null,
       uploadedAt: Timestamp.now(),
     })
     return { id: docRef.id, error: null }
@@ -78,6 +80,7 @@ export const getAllMedia = async (): Promise<Media[]> => {
         type: data.type,
         uploadedAt: data.uploadedAt.toDate(),
         link: data.link || undefined,
+        place: data.place || undefined,
       })
     }
 
@@ -109,6 +112,7 @@ export const getMediaByCategory = async (
         type: data.type,
         uploadedAt: data.uploadedAt.toDate(),
         link: data.link || undefined,
+        place: data.place || undefined,
       })
     }
 

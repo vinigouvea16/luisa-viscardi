@@ -16,6 +16,7 @@ export type Media = {
   uploadedAt: Date
   order?: number
   link?: string
+  place?: string
 }
 
 // Labels amigáveis para as categorias

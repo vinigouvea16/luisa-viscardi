@@ -3,7 +3,7 @@ import { useContent } from '@/context/content-context'
 export default function DesktopAboutSection() {
   const { content } = useContent()
   return (
-    <div className="grid grid-cols-12 gap-5 2xl:px-32.5 px-10 mt-50 lg:mt-20 xl:mt-0">
+    <div className="grid grid-cols-12 gap-5 2xl:px-32.5 px-10">
       {/* Div (PT)*/}
       <div className="col-start-3 space-y-10 col-span-4 font-bold  font-bento-sans">
         <div className="flex flex-col gap-2 ">

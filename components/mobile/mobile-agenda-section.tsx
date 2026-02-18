@@ -139,9 +139,11 @@ export default function AgendaSectionMobile() {
                 <p className="uppercase text-luisa-gray/70">
                   {agendaGif.title}
                 </p>
-                {/* <p className="uppercase text-luisa-gray/70">
-                  parque villa-lobos
-                </p> */}
+                {agendaGif.place && (
+                  <p className="uppercase text-luisa-gray/70">
+                    {agendaGif.place}
+                  </p>
+                )}
               </div>
             </>
           ) : (

@@ -58,7 +58,7 @@ export default function AboutSection() {
               )}
               <div className="flex justify-between tracking-wide uppercase text-[8px] mt-1 lg:text-xs text-luisa-gray/70">
                 <p>{aboutGif.title}</p>
-                {/* <p>centro esportivo tietê</p> */}
+                {aboutGif.place && <p>{aboutGif.place}</p>}
               </div>
             </>
           ) : (
